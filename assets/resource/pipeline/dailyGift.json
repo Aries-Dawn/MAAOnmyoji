@@ -1,0 +1,53 @@
+{
+    "勾玉盒子": {
+        "recognition": "TemplateMatch",
+        "template": "main\\box_Magatama.png",
+        "action": "Click",
+        "post_delay": 500,
+        "next": [
+            "获得奖励"
+        ],
+        "interrupt": []
+    },
+    "体力小人": {
+        "recognition": "TemplateMatch",
+        "template": "main\\sushiGift.png",
+        "action": "Click",
+        "next": [
+            "获得奖励"
+        ],
+        "interrupt": []
+    },
+    "勾玉小人": {
+        "recognition": "TemplateMatch",
+        "template": "main\\magatamaGift.png",
+        "action": "Click",
+        "next": [
+            "获得奖励"
+        ],
+        "interrupt": []
+    },
+    "抽签": {
+        "recognition": "TemplateMatch",
+        "template": "main\\box_Magatama.png",
+        "action": "Click"
+    },
+    "获得奖励": {
+        "recognition": "TemplateMatch",
+        "template": "main\\getGift.png",
+        "action": "Click",
+        "target": [
+            22,
+            481,
+            1238,
+            228
+        ]
+    },
+    "dailyGift": {
+        "next": [
+            "勾玉盒子",
+            "体力小人",
+            "勾玉小人"
+        ]
+    }
+}
