@@ -1,0 +1,88 @@
+{
+    "28": {
+        "recognition": "TemplateMatch",
+        "template": "tanSuo\\28.png",
+        "action": "Click",
+        "next": [
+            "tansuo"
+        ]
+    },
+    "tansuo": {
+        "recognition": "TemplateMatch",
+        "template": "tanSuo\\tanSuo.png",
+        "action": "Click",
+        "next": [
+            "Boss_TanSuo",
+            "zhanDou_TanSuo"
+        ],
+        "interrupt": [
+            "FuBenZhongTuoDong"
+        ]
+    },
+    "Boss_TanSuo": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "tanSuo\\boss.png"
+        ],
+        "action": "Click",
+        "next": [
+            "jieShuTanSuo"
+        ],
+        "interrupt": [
+            "tiaozhan_Shengli",
+            "tiaozhan_Fu"
+        ]
+    },
+    "jieShuTanSuo": {
+        "recognition": "TemplateMatch",
+        "template": "tanSuo\\giftXiaoRen_TanSuo.png",
+        "action": "Click",
+        "next": [
+            "28",
+            "tansuo"
+        ],
+        "interrupt": [
+            "jieShuTanSuo"
+        ]
+    },
+    "zhanDou_TanSuo": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "tanSuo\\zhanDou.png",
+            "tanSuo\\zhanDou2.png"
+        ],
+        "action": "Click",
+        "next": [
+            "Boss_TanSuo",
+            "zhanDou_TanSuo"
+        ],
+        "interrupt": [
+            "tiaozhan_Shengli",
+            "tiaozhan_Fu",
+            "FuBenZhongTuoDong"
+        ]
+    },
+    "FuBenZhongTuoDong": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "tanSuo\\zhanDou.png",
+            "tanSuo\\zhanDou2.png",
+            "tanSuo\\boss.png"
+        ],
+        "inverse": true,
+        "action": "Swipe",
+        "begin": [
+            1230,
+            258,
+            0,
+            0
+        ],
+        "end": [
+            620,
+            214,
+            0,
+            0
+        ],
+        "duration": 500
+    }
+}

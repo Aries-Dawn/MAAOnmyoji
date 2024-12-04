@@ -1,0 +1,40 @@
+{
+    "tiaozhan_yuLing": {
+        "recognition": "TemplateMatch",
+        "template": "zhandou\\tiaozhan_yulin.png",
+        "action": "Click",
+        "focus": true,
+        "timeout": 40000,
+        "focus_tip": "开始一次御灵",
+        "next": [
+            "tiaozhan_yuLing"
+        ],
+        "interrupt": [
+            "tiaozhan_Shengli",
+            "tiaozhan_Fu"
+        ]
+    },
+    "tiaozhan_Shengli": {
+        "recognition": "TemplateMatch",
+        "template": "zhandou\\shengli.png",
+        "threshold": 0.6,
+        "action": "Click",
+        "target": [
+            720,
+            461,
+            522,
+            247
+        ]
+    },
+    "tiaozhan_Fu": {
+        "recognition": "TemplateMatch",
+        "template": "tanSuo\\fu.png",
+        "action": "Click",
+        "target": [
+            732,
+            445,
+            535,
+            267
+        ]
+    }
+}
