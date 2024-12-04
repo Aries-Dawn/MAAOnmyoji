@@ -42,7 +42,9 @@
         ],
         "action": "Click",
         "next": [
-            "jieShuTanSuo"
+            "jieShuTanSuo",
+            "28",
+            "tansuo"
         ],
         "post_delay": 500,
         "interrupt": [
