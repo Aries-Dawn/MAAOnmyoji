@@ -20,6 +20,12 @@
             "doc": "进入御灵界面，[b]选择要开始的副本[b]，锁定阵容后使用。",
             "repeatable": true,
             "repeat_count": 0
+        },
+        {
+            "name": "困28",
+            "entry": "28",
+            "checked": true,
+            "doc": "进入探索界面"
         }
     ]
 }

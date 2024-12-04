@@ -6,6 +6,7 @@
         "focus": true,
         "timeout": 40000,
         "focus_tip": "开始一次御灵",
+        "post_delay": 500,
         "next": [
             "tiaozhan_yuLing"
         ],
@@ -30,6 +31,7 @@
         "recognition": "TemplateMatch",
         "template": "tanSuo\\fu.png",
         "action": "Click",
+        "post_delay": 600,
         "target": [
             732,
             445,
