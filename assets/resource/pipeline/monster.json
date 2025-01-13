@@ -135,11 +135,17 @@
         "inverse": true,
         "action": "DoNothing",
         "next": [
-            "首领"
+            "收获逢魔奖励"
         ]
     },
     "收获逢魔奖励": {
         "action": "Click",
+        "target": [
+            1210,
+            210,
+            47,
+            49
+        ],
         "next": [
             "首领"
         ]
@@ -231,6 +237,102 @@
             136,
             35,
             34
+        ],
+        "next": [
+            "已换好"
+        ],
+        "interrupt": [
+            "确定"
         ]
+    },
+    "确定": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\queDing.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "已换好"
+        ]
+    },
+    "已换好": {
+        "action": "Click",
+        "target": [
+            18,
+            9,
+            44,
+            41
+        ],
+        "post_delay": 2000,
+        "next": [
+            "逢魔首领"
+        ]
+    },
+    "逢魔首领": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\shouLing.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "点击首领"
+        ]
+    },
+    "点击首领": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\jiJie.png",
+        "action": "Click",
+        "target_offset": [
+            0,
+            -90,
+            90,
+            90
+        ],
+        "next": [
+            "集结挑战"
+        ],
+        "interrupt": [
+            "点击首领"
+        ]
+    },
+    "集结挑战": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\jiJieTiaoZhan.png",
+        "action": "Click",
+        "next": [
+            "进入了吗"
+        ],
+        "interrupt": [
+            "重新寻找"
+        ]
+    },
+    "重新寻找": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\jiJieTiaoZhan.png",
+        "action": "Click",
+        "pre_delay": 1000,
+        "target": [
+            1110,
+            46,
+            54,
+            55
+        ],
+        "next": [
+            "点击首领"
+        ]
+    },
+    "进入了吗": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\zhenRongYuShe.png",
+        "action": "DoNothing",
+        "next": []
+    },
+    "确认进入": {
+        "recognition": "TemplateMatch",
+        "template": ""
+    },
+    "结束首领战斗": {
+        "recognition": "TemplateMatch",
+        "template": "",
+        "action": "DoNothing",
+        "next": []
     }
 }
