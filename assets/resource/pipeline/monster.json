@@ -155,7 +155,16 @@
         "template": "FengMo\\shouLing.png",
         "action": "Click",
         "next": [
-            "鬼灵"
+            "鬼灵",
+            "蜃气楼"
+        ]
+    },
+    "蜃气楼": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\shenQiLou.png",
+        "action": "DoNothing",
+        "next": [
+            "更换御魂_鬼灵"
         ]
     },
     "鬼灵": {
@@ -193,13 +202,36 @@
         "next": [
             "寻找逢魔御魂1",
             "寻找逢魔御魂2"
+        ],
+        "interrupt": [
+            "回到预设顶部"
         ]
+    },
+    "回到预设顶部": {
+        "action": "Swipe",
+        "begin": [
+            1189,
+            173,
+            0,
+            0
+        ],
+        "end": [
+            1190,
+            609,
+            0,
+            0
+        ],
+        "duration": 500
     },
     "寻找逢魔御魂1": {
         "recognition": "TemplateMatch",
         "template": "shiShenLu\\fengMo.png",
         "action": "Click",
+        "threshold": 0.9,
         "next": [
+            "寻找鬼灵"
+        ],
+        "interrupt": [
             "式神录回到顶部"
         ]
     },
@@ -207,7 +239,11 @@
         "recognition": "TemplateMatch",
         "template": "shiShenLu\\fengMo2.png",
         "action": "Click",
+        "threshold": 0.9,
         "next": [
+            "寻找鬼灵"
+        ],
+        "interrupt": [
             "式神录回到顶部"
         ]
     },
@@ -225,10 +261,7 @@
             0,
             0
         ],
-        "duration": 500,
-        "next": [
-            "寻找鬼灵"
-        ]
+        "duration": 500
     },
     "寻找鬼灵": {
         "action": "Click",
@@ -238,17 +271,19 @@
             35,
             34
         ],
+        "post_delay": 2000,
         "next": [
-            "已换好"
+            "确定"
         ],
         "interrupt": [
-            "确定"
+            "已换好"
         ]
     },
     "确定": {
         "recognition": "TemplateMatch",
         "template": "shiShenLu\\queDing.png",
         "action": "Click",
+        "threshold": 0.9,
         "post_delay": 1000,
         "next": [
             "已换好"
@@ -264,6 +299,7 @@
         ],
         "post_delay": 2000,
         "next": [
+            "逢魔极",
             "逢魔首领"
         ]
     },
@@ -276,10 +312,31 @@
             "点击首领"
         ]
     },
+    "逢魔极": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\fengMoJi.png",
+        "roi": [
+            844,
+            605,
+            143,
+            114
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "点击首领"
+        ]
+    },
     "点击首领": {
         "recognition": "TemplateMatch",
         "template": "FengMo\\jiJie.png",
         "action": "Click",
+        "roi": [
+            391,
+            168,
+            534,
+            392
+        ],
         "target_offset": [
             0,
             -90,
@@ -297,6 +354,13 @@
         "recognition": "TemplateMatch",
         "template": "FengMo\\jiJieTiaoZhan.png",
         "action": "Click",
+        "roi": [
+            1051,
+            505,
+            159,
+            146
+        ],
+        "post_delay": 2000,
         "next": [
             "进入了吗"
         ],
@@ -316,6 +380,7 @@
             55
         ],
         "next": [
+            "进入了吗",
             "点击首领"
         ]
     },
@@ -323,16 +388,100 @@
         "recognition": "TemplateMatch",
         "template": "FengMo\\zhenRongYuShe.png",
         "action": "DoNothing",
-        "next": []
+        "next": [
+            "确认进入"
+        ],
+        "interrupt": [
+            "寻找盒子"
+        ]
+    },
+    "寻找盒子": {
+        "recognition": "FeatureMatch",
+        "template": "common\\box.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "点击空白"
+        ]
+    },
+    "点击空白": {
+        "action": "Click",
+        "target": [
+            302,
+            517,
+            783,
+            91
+        ]
     },
     "确认进入": {
         "recognition": "TemplateMatch",
-        "template": ""
+        "template": "FengMo\\jinruZhanDou.png",
+        "timeout": 200000,
+        "roi": [
+            396,
+            256,
+            531,
+            440
+        ],
+        "threshold": 0.6,
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "准备_逢魔"
+        ]
+    },
+    "准备_逢魔": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\zhunBei.png",
+        "action": "Click",
+        "next": [
+            "结束首领战斗"
+        ]
     },
     "结束首领战斗": {
         "recognition": "TemplateMatch",
-        "template": "",
-        "action": "DoNothing",
+        "template": "zhandou\\shengli_fengMo.png",
+        "roi": [
+            268,
+            0,
+            794,
+            316
+        ],
+        "action": "Click",
+        "target": [
+            946,
+            490,
+            328,
+            229
+        ],
+        "post_delay": 2000,
+        "timeout": 2000000,
+        "next": []
+    },
+    "福袋结算": {
+        "recognition": "TemplateMatch",
+        "template": "tanSuo\\fu.png",
+        "action": "Click",
+        "target": [
+            946,
+            490,
+            328,
+            229
+        ],
+        "next": [
+            "结束逢魔"
+        ]
+    },
+    "结束逢魔": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\zhenRongYuShe.png",
+        "action": "Click",
+        "target": [
+            18,
+            9,
+            44,
+            41
+        ],
         "next": []
     }
 }
