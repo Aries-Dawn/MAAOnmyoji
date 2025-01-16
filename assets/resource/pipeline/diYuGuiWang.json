@@ -1,5 +1,5 @@
 {
-    "进入探索-地鬼": {
+    "进入探索_地鬼": {
         "recognition": "TemplateMatch",
         "template": "main\\explore.png",
         "action": "Click",
@@ -110,6 +110,222 @@
         ],
         "post_delay": 2000,
         "next": [
+            "筛选1"
+        ]
+    },
+    "筛选1": {
+        "recognition": "TemplateMatch",
+        "template": "diGui\\shaiXuan.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "热门1"
+        ]
+    },
+    "热门1": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\Hot.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "挑战1"
+        ]
+    },
+    "挑战1": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan.png",
+        "roi": [
+            1037,
+            203,
+            141,
+            134
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "开始挑战普通地鬼"
+        ]
+    },
+    "挑战2": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan.png",
+        "roi": [
+            1014,
+            320,
+            173,
+            194
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "开始挑战普通地鬼"
+        ]
+    },
+    "开始挑战普通地鬼": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan_JinRu.png",
+        "roi": [
+            922,
+            305,
+            354,
+            414
+        ],
+        "action": "Click",
+        "post_delay": 4000,
+        "next": [
+            "准备_地鬼"
+        ]
+    },
+    "准备_地鬼": {
+        "recognition": "TemplateMatch",
+        "template": "common\\zhunBei.png",
+        "action": "Click",
+        "next": [
+            "结束地鬼战斗"
+        ]
+    },
+    "结束地鬼战斗": {
+        "recognition": "TemplateMatch",
+        "template": "zhandou\\shengli_fengMo.png",
+        "roi": [
+            268,
+            0,
+            794,
+            316
+        ],
+        "action": "Click",
+        "target": [
+            946,
+            490,
+            328,
+            229
+        ],
+        "post_delay": 2000,
+        "timeout": 500000,
+        "next": [
+            "结算"
+        ],
+        "interrupt": [
+            "福袋"
+        ]
+    },
+    "结算": {
+        "recognition": "FeatureMatch",
+        "count": 20,
+        "template": "diGui\\tiaoZhan_JinRu.png",
+        "roi": [
+            888,
+            279,
+            391,
+            440
+        ],
+        "action": "Click",
+        "target": [
+            1186,
+            25,
+            46,
+            41
+        ],
+        "post_delay": 1000,
+        "next": [
+            "今日挑战"
+        ]
+    },
+    "今日挑战": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\jinRiTiaoZhan.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "第2次"
+        ],
+        "interrupt": [
+            "筛选悬赏"
+        ]
+    },
+    "第2次": {
+        "recognition": "FeatureMatch",
+        "roi": [
+            254,
+            275,
+            115,
+            230
+        ],
+        "template": "diGui\\weiXuanZe.png",
+        "action": "DoNothing",
+        "next": [
+            "筛选2"
+        ]
+    },
+    "筛选2": {
+        "recognition": "TemplateMatch",
+        "template": "diGui\\shaiXuan.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "热门2"
+        ]
+    },
+    "热门2": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\Hot.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "挑战2"
+        ]
+    },
+    "筛选悬赏": {
+        "recognition": "TemplateMatch",
+        "template": "diGui\\shaiXuan.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "地鬼悬赏"
+        ]
+    },
+    "地鬼悬赏": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\xuanShang.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "挑战2"
+        ]
+    },
+    "寻找满星挑战": {},
+    "悬赏挑战1": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan.png",
+        "roi": [
+            864,
+            236,
+            319,
+            133
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "判断是否三蛋"
+        ],
+        "interrupt": [
+            "返回筛选2"
+        ]
+    },
+    "返回筛选2": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan_JinRu.png",
+        "action": "Click",
+        "target": [
+            1185,
+            18,
+            54,
+            52
+        ],
+        "next": [
+            "悬赏挑战2"
+        ],
+        "interrupt": [
             "筛选"
         ]
     },
@@ -117,20 +333,275 @@
         "recognition": "TemplateMatch",
         "template": "diGui\\shaiXuan.png",
         "action": "Click",
-        "post_delay": 1000,
+        "post_delay": 1000
+    },
+    "悬赏挑战2": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan.png",
+        "roi": [
+            857,
+            358,
+            313,
+            138
+        ],
+        "action": "Click",
+        "post_delay": 2000,
         "next": [
-            "热门1",
-            "热门2"
+            "判断是否三蛋"
+        ],
+        "interrupt": [
+            "返回筛选3"
         ]
     },
-    "热门1": {
-        "recognition": "TemplateMatch",
-        "template": "diGui\\Hot.png",
-        "action": "Click"
+    "返回筛选3": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan_JinRu.png",
+        "action": "Click",
+        "target": [
+            1185,
+            18,
+            54,
+            52
+        ],
+        "next": [
+            "悬赏挑战3"
+        ],
+        "interrupt": [
+            "筛选"
+        ]
     },
-    "热门2": {
+    "悬赏挑战3": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan.png",
+        "roi": [
+            859,
+            495,
+            315,
+            115
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "判断是否三蛋"
+        ],
+        "interrupt": [
+            "返回筛选4"
+        ]
+    },
+    "返回筛选4": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan_JinRu.png",
+        "action": "Click",
+        "target": [
+            1185,
+            18,
+            54,
+            52
+        ],
+        "next": [
+            "悬赏挑战4"
+        ],
+        "interrupt": [
+            "筛选"
+        ]
+    },
+    "悬赏挑战4": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan.png",
+        "roi": [
+            853,
+            597,
+            320,
+            111
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "判断是否三蛋"
+        ],
+        "interrupt": [
+            "返回筛选5"
+        ]
+    },
+    "返回筛选5": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan_JinRu.png",
+        "action": "Click",
+        "target": [
+            1185,
+            18,
+            54,
+            52
+        ],
+        "next": [
+            "上滑"
+        ],
+        "interrupt": [
+            "筛选"
+        ]
+    },
+    "上滑": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan_JinRu.png",
+        "action": "Swipe",
+        "begin": [
+            1020,
+            629,
+            125,
+            30
+        ],
+        "end": [
+            1033,
+            267,
+            125,
+            30
+        ],
+        "duration": 2000,
+        "post_delay": 2000,
+        "next": [
+            "悬赏挑战5"
+        ]
+    },
+    "悬赏挑战5": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan.png",
+        "roi": [
+            864,
+            572,
+            312,
+            126
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "判断是否三蛋"
+        ],
+        "interrupt": [
+            "返回筛选5"
+        ]
+    },
+    "判断是否三蛋": {
+        "recognition": "ColorMatch",
+        "roi": [
+            895,
+            648,
+            11,
+            11
+        ],
+        "upper": [
+            255,
+            201,
+            49
+        ],
+        "lower": [
+            255,
+            201,
+            49
+        ],
+        "action": "DoNothing",
+        "target": [
+            1186,
+            20,
+            49,
+            45
+        ],
+        "next": [
+            "开始挑战悬赏地鬼"
+        ]
+    },
+    "开始挑战悬赏地鬼": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan_JinRu.png",
+        "roi": [
+            922,
+            305,
+            354,
+            414
+        ],
+        "action": "Click",
+        "post_delay": 4000,
+        "next": [
+            "准备_悬赏地鬼"
+        ]
+    },
+    "准备_悬赏地鬼": {
         "recognition": "TemplateMatch",
-        "template": "diGui\\Hot2.png",
-        "action": "Click"
+        "template": "common\\zhunBei.png",
+        "action": "Click",
+        "next": [
+            "结束悬赏地鬼战斗"
+        ]
+    },
+    "结束悬赏地鬼战斗": {
+        "recognition": "FeatureMatch",
+        "template": "zhandou\\shengli_fengMo.png",
+        "roi": [
+            268,
+            0,
+            794,
+            316
+        ],
+        "action": "Click",
+        "target": [
+            946,
+            490,
+            328,
+            229
+        ],
+        "post_delay": 2000,
+        "timeout": 500000,
+        "next": [
+            "结算悬赏"
+        ],
+        "interrupt": [
+            "福袋"
+        ]
+    },
+    "结算悬赏": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\tiaoZhan_JinRu.png",
+        "roi": [
+            888,
+            279,
+            391,
+            440
+        ],
+        "action": "Click",
+        "target": [
+            1186,
+            25,
+            46,
+            41
+        ],
+        "post_delay": 1000,
+        "next": [
+            "退出地鬼"
+        ]
+    },
+    "退出地鬼": {
+        "recognition": "FeatureMatch",
+        "template": "diGui\\jinRiTiaoZhan.png",
+        "action": "Click",
+        "target": [
+            46,
+            32,
+            50,
+            54
+        ],
+        "next": [
+            "从探索界面回到主界面"
+        ]
+    },
+    "福袋": {
+        "recognition": "FeatureMatch",
+        "template": "tanSuo\\fu.png",
+        "action": "Click",
+        "target": [
+            777,
+            419,
+            502,
+            300
+        ],
+        "post_delay": 3000
     }
 }
