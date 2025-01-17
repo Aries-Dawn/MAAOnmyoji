@@ -1,0 +1,44 @@
+{
+    "打开好友界面": {
+        "next": [
+            "点击好友图标"
+        ],
+        "interrupt": [
+            "打开卷轴"
+        ]
+    },
+    "点击好友图标": {
+        "recognition": "TemplateMatch",
+        "template": "main\\friends.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "一键收取"
+        ],
+        "interrupt": [
+            "友情点"
+        ]
+    },
+    "友情点": {
+        "recognition": "TemplateMatch",
+        "template": "main\\haoyou_youqingdian.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "一键收取"
+        ]
+    },
+    "一键收取": {
+        "recognition": "TemplateMatch",
+        "template": "main\\yiJianShouQu.png",
+        "action": "Click",
+        "next": [
+            "是否回到主界面"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "获得奖励",
+            "返回"
+        ]
+    }
+}
