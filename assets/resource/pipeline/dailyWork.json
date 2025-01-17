@@ -6,7 +6,10 @@
     },
     "悬赏封印": {
         "recognition": "TemplateMatch",
-        "template": "main\\lock.png",
+        "template": [
+            "main\\lock.png",
+            "main\\xuanShang.png"
+        ],
         "action": "Click",
         "next": [
             "已追踪"
