@@ -1,32 +1,32 @@
 {
-    "每日商店": {
-        "next": [
-            "点击商店"
-        ]
-    },
-    "点击商店": {
-        "recognition": "TemplateMatch",
-        "template": "main\\shop.png",
-        "action": "Click",
-        "next": [
-            "点击礼包屋"
-        ]
-    },
-    "点击礼包屋": {
-        "recognition": "TemplateMatch",
-        "template": "main\\liBaoWu.png",
-        "action": "Click",
-        "next": []
-    },
-    "点击每日商店礼包": {
-        "recognition": "TemplateMatch",
-        "template": "main\\meiRiShangDianLiBao.png",
-        "action": "Click",
-        "next": [
-            "是否回到主界面"
-        ],
-        "interrupt": [
-            "返回"
-        ]
-    }
+  "每日商店": {
+    "next": [
+      "点击商店"
+    ]
+  },
+  "点击商店": {
+    "recognition": "TemplateMatch",
+    "template": "main/shop.png",
+    "action": "Click",
+    "next": [
+      "点击礼包屋"
+    ]
+  },
+  "点击礼包屋": {
+    "recognition": "TemplateMatch",
+    "template": "main/liBaoWu.png",
+    "action": "Click",
+    "next": []
+  },
+  "点击每日商店礼包": {
+    "recognition": "TemplateMatch",
+    "template": "main/meiRiShangDianLiBao.png",
+    "action": "Click",
+    "next": [
+      "是否回到主界面"
+    ],
+    "interrupt": [
+      "返回"
+    ]
+  }
 }

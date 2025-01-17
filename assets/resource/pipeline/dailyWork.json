@@ -1,319 +1,319 @@
 {
-    "悬赏封印-入口": {
-        "next": [
-            "悬赏封印"
-        ]
-    },
-    "悬赏封印": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "main\\lock.png",
-            "main\\xuanShang.png"
-        ],
-        "action": "Click",
-        "next": [
-            "已追踪"
-        ],
-        "interrupt": [
-            "有无协助",
-            "一键追踪"
-        ]
-    },
-    "有无协助": {
-        "recognition": "FeatureMatch",
-        "template": "xuanShang\\Add.png",
-        "action": "Click",
-        "next": [
-            "点击第1个位置"
-        ],
-        "post_delay": 5000,
-        "on_error": [
-            "空"
-        ]
-    },
-    "点击第1个位置": {
-        "recognition": "FeatureMatch",
-        "template": "xuanShang\\refresh.png",
-        "inverse": true,
-        "action": "Click",
-        "target": [
-            245,
-            191,
-            173,
-            70
-        ],
-        "next": [
-            "点击第2个位置"
-        ],
-        "on_error": [
-            "空"
-        ]
-    },
-    "空": {
-        "action": "DoNothing"
-    },
-    "点击第2个位置": {
-        "recognition": "FeatureMatch",
-        "template": "xuanShang\\refresh.png",
-        "inverse": true,
-        "action": "Click",
-        "target": [
-            532,
-            193,
-            177,
-            67
-        ],
-        "next": [
-            "点击第3个位置"
-        ],
-        "on_error": [
-            "空"
-        ]
-    },
-    "点击第3个位置": {
-        "recognition": "FeatureMatch",
-        "template": "xuanShang\\refresh.png",
-        "inverse": true,
-        "action": "Click",
-        "target": [
-            232,
-            286,
-            182,
-            69
-        ],
-        "next": [
-            "点击第4个位置"
-        ],
-        "on_error": [
-            "空"
-        ]
-    },
-    "点击第4个位置": {
-        "recognition": "FeatureMatch",
-        "template": "xuanShang\\refresh.png",
-        "inverse": true,
-        "action": "Click",
-        "target": [
-            528,
-            282,
-            183,
-            76
-        ],
-        "next": [
-            "点击第5个位置"
-        ],
-        "on_error": [
-            "空"
-        ]
-    },
-    "点击第5个位置": {
-        "recognition": "FeatureMatch",
-        "template": "xuanShang\\refresh.png",
-        "inverse": true,
-        "action": "Click",
-        "target": [
-            228,
-            376,
-            193,
-            80
-        ],
-        "next": [
-            "邀请"
-        ],
-        "on_error": [
-            "空"
-        ]
-    },
-    "邀请": {
-        "recognition": "TemplateMatch",
-        "template": "xuanShang\\yaoQing.png",
-        "action": "Click",
-        "post_delay": 10000
-    },
-    "一键追踪": {
-        "recognition": "TemplateMatch",
-        "template": "main\\tracking.png",
-        "roi": [
-            1037,
-            543,
-            223,
-            150
-        ],
-        "action": "Click"
-    },
-    "已追踪": {
-        "recognition": "TemplateMatch",
-        "template": "main\\undoTracking.png",
-        "action": "Click",
-        "target": [
-            1143,
-            100,
-            69,
-            66
-        ],
-        "threshold": 0.9,
-        "next": [
-            "进入探索"
-        ]
-    },
-    "进入探索": {
-        "recognition": "TemplateMatch",
-        "template": "main\\explore.png",
-        "action": "Click",
-        "next": [
-            "开始封印"
-        ]
-    },
-    "开始封印": {
-        "next": [
-            "挑战结束"
-        ],
-        "interrupt": [
-            "点击封印"
-        ]
-    },
-    "点击封印": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\job.png",
-        "action": "Click",
-        "next": [
-            "前往挑战"
-        ],
-        "interrupt": [
-            "获得奖励"
-        ]
-    },
-    "挑战结束": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\job.png",
-        "inverse": true,
-        "action": "DoNothing",
-        "next": [
-            "结束"
-        ]
-    },
-    "结束": {
-        "action": "StopTask"
-    },
-    "前往挑战": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\clickGo.png",
-        "action": "Click",
-        "post_delay": 600,
-        "next": [
-            "副本探索",
-            "挑战"
-        ]
-    },
-    "副本探索": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\tanSuo.png",
-        "action": "Click",
-        "threshold": 0.88,
-        "post_delay": 800,
-        "next": [
-            "寻找目标"
-        ],
-        "interrupt": [
-            "副本挑战中拖动"
-        ]
-    },
-    "寻找目标": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "tanSuo\\zhanDou.png",
-            "tanSuo\\zhanDou2.png"
-        ],
-        "action": "Click",
-        "next": [
-            "结束战斗1"
-        ]
-    },
-    "结束战斗1": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\fu.png",
-        "action": "Click",
-        "on_error": [
-            "结束战斗2"
-        ],
-        "next": [
-            "寻找目标"
-        ]
-    },
-    "结束战斗2": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\fu.png",
-        "action": "Click",
-        "on_error": [
-            "结束战斗1"
-        ],
-        "next": [
-            "寻找目标"
-        ]
-    },
-    "副本挑战中拖动": {
-        "action": "Swipe",
-        "begin": [
-            1230,
-            258,
-            0,
-            0
-        ],
-        "end": [
-            620,
-            214,
-            0,
-            0
-        ],
-        "duration": 500
-    },
-    "挑战": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\tiaoZhan.png",
-        "action": "Click",
-        "threshold": 0.88,
-        "next": [
-            "结束战斗1"
-        ]
-    },
-    "结束战斗3": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\fu.png",
-        "action": "Click",
-        "on_error": [
-            "结束战斗4"
-        ],
-        "next": [
-            "关闭界面"
-        ]
-    },
-    "结束战斗4": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\fu.png",
-        "action": "Click",
-        "on_error": [
-            "结束战斗3"
-        ],
-        "next": [
-            "关闭界面"
-        ]
-    },
-    "关闭界面": {
-        "pre_delay": 500,
-        "action": "Click",
-        "target": [
-            1026,
-            112,
-            54,
-            60
-        ],
-        "post_delay": 500,
-        "next": [
-            "开始封印"
-        ]
-    }
+  "悬赏封印-入口": {
+    "next": [
+      "悬赏封印"
+    ]
+  },
+  "悬赏封印": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "main/lock.png",
+      "main/xuanShang.png"
+    ],
+    "action": "Click",
+    "next": [
+      "已追踪"
+    ],
+    "interrupt": [
+      "有无协助",
+      "一键追踪"
+    ]
+  },
+  "有无协助": {
+    "recognition": "FeatureMatch",
+    "template": "xuanShang/Add.png",
+    "action": "Click",
+    "next": [
+      "点击第1个位置"
+    ],
+    "post_delay": 5000,
+    "on_error": [
+      "空"
+    ]
+  },
+  "点击第1个位置": {
+    "recognition": "FeatureMatch",
+    "template": "xuanShang/refresh.png",
+    "inverse": true,
+    "action": "Click",
+    "target": [
+      245,
+      191,
+      173,
+      70
+    ],
+    "next": [
+      "点击第2个位置"
+    ],
+    "on_error": [
+      "空"
+    ]
+  },
+  "空": {
+    "action": "DoNothing"
+  },
+  "点击第2个位置": {
+    "recognition": "FeatureMatch",
+    "template": "xuanShang/refresh.png",
+    "inverse": true,
+    "action": "Click",
+    "target": [
+      532,
+      193,
+      177,
+      67
+    ],
+    "next": [
+      "点击第3个位置"
+    ],
+    "on_error": [
+      "空"
+    ]
+  },
+  "点击第3个位置": {
+    "recognition": "FeatureMatch",
+    "template": "xuanShang/refresh.png",
+    "inverse": true,
+    "action": "Click",
+    "target": [
+      232,
+      286,
+      182,
+      69
+    ],
+    "next": [
+      "点击第4个位置"
+    ],
+    "on_error": [
+      "空"
+    ]
+  },
+  "点击第4个位置": {
+    "recognition": "FeatureMatch",
+    "template": "xuanShang/refresh.png",
+    "inverse": true,
+    "action": "Click",
+    "target": [
+      528,
+      282,
+      183,
+      76
+    ],
+    "next": [
+      "点击第5个位置"
+    ],
+    "on_error": [
+      "空"
+    ]
+  },
+  "点击第5个位置": {
+    "recognition": "FeatureMatch",
+    "template": "xuanShang/refresh.png",
+    "inverse": true,
+    "action": "Click",
+    "target": [
+      228,
+      376,
+      193,
+      80
+    ],
+    "next": [
+      "邀请"
+    ],
+    "on_error": [
+      "空"
+    ]
+  },
+  "邀请": {
+    "recognition": "TemplateMatch",
+    "template": "xuanShang/yaoQing.png",
+    "action": "Click",
+    "post_delay": 10000
+  },
+  "一键追踪": {
+    "recognition": "TemplateMatch",
+    "template": "main/tracking.png",
+    "roi": [
+      1037,
+      543,
+      223,
+      150
+    ],
+    "action": "Click"
+  },
+  "已追踪": {
+    "recognition": "TemplateMatch",
+    "template": "main/undoTracking.png",
+    "action": "Click",
+    "target": [
+      1143,
+      100,
+      69,
+      66
+    ],
+    "threshold": 0.9,
+    "next": [
+      "进入探索"
+    ]
+  },
+  "进入探索": {
+    "recognition": "TemplateMatch",
+    "template": "main/explore.png",
+    "action": "Click",
+    "next": [
+      "开始封印"
+    ]
+  },
+  "开始封印": {
+    "next": [
+      "挑战结束"
+    ],
+    "interrupt": [
+      "点击封印"
+    ]
+  },
+  "点击封印": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/job.png",
+    "action": "Click",
+    "next": [
+      "前往挑战"
+    ],
+    "interrupt": [
+      "获得奖励"
+    ]
+  },
+  "挑战结束": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/job.png",
+    "inverse": true,
+    "action": "DoNothing",
+    "next": [
+      "结束"
+    ]
+  },
+  "结束": {
+    "action": "StopTask"
+  },
+  "前往挑战": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/clickGo.png",
+    "action": "Click",
+    "post_delay": 600,
+    "next": [
+      "副本探索",
+      "挑战"
+    ]
+  },
+  "副本探索": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/tanSuo.png",
+    "action": "Click",
+    "threshold": 0.88,
+    "post_delay": 800,
+    "next": [
+      "寻找目标"
+    ],
+    "interrupt": [
+      "副本挑战中拖动"
+    ]
+  },
+  "寻找目标": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "tanSuo/zhanDou.png",
+      "tanSuo/zhanDou2.png"
+    ],
+    "action": "Click",
+    "next": [
+      "结束战斗1"
+    ]
+  },
+  "结束战斗1": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/fu.png",
+    "action": "Click",
+    "on_error": [
+      "结束战斗2"
+    ],
+    "next": [
+      "寻找目标"
+    ]
+  },
+  "结束战斗2": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/fu.png",
+    "action": "Click",
+    "on_error": [
+      "结束战斗1"
+    ],
+    "next": [
+      "寻找目标"
+    ]
+  },
+  "副本挑战中拖动": {
+    "action": "Swipe",
+    "begin": [
+      1230,
+      258,
+      0,
+      0
+    ],
+    "end": [
+      620,
+      214,
+      0,
+      0
+    ],
+    "duration": 500
+  },
+  "挑战": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/tiaoZhan.png",
+    "action": "Click",
+    "threshold": 0.88,
+    "next": [
+      "结束战斗1"
+    ]
+  },
+  "结束战斗3": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/fu.png",
+    "action": "Click",
+    "on_error": [
+      "结束战斗4"
+    ],
+    "next": [
+      "关闭界面"
+    ]
+  },
+  "结束战斗4": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/fu.png",
+    "action": "Click",
+    "on_error": [
+      "结束战斗3"
+    ],
+    "next": [
+      "关闭界面"
+    ]
+  },
+  "关闭界面": {
+    "pre_delay": 500,
+    "action": "Click",
+    "target": [
+      1026,
+      112,
+      54,
+      60
+    ],
+    "post_delay": 500,
+    "next": [
+      "开始封印"
+    ]
+  }
 }

@@ -1,113 +1,113 @@
 {
-    "28": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\28.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "post_delay": 500,
-        "next": [
-            "tansuo"
-        ]
-    },
-    "tansuo": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\tanSuo.png",
-        "action": "Click",
-        "next": [
-            "Boss_TanSuo",
-            "zhanDou_TanSuo"
-        ],
-        "post_delay": 500,
-        "interrupt": [
-            "FuBenZhongTuoDong"
-        ]
-    },
-    "zhuJieMian": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\fanhui.png",
-        "action": "DoNothing",
-        "threshold": 0.8,
-        "next": [
-            "Boss_TanSuo",
-            "zhanDou_TanSuo"
-        ],
-        "interrupt": [
-            "FuBenZhongTuoDong"
-        ]
-    },
-    "Boss_TanSuo": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "tanSuo\\boss.png"
-        ],
-        "action": "Click",
-        "next": [
-            "jieShuTanSuo",
-            "28",
-            "tansuo"
-        ],
-        "post_delay": 500,
-        "interrupt": [
-            "tiaozhan_Shengli",
-            "tiaozhan_Fu"
-        ]
-    },
-    "jieShuTanSuo": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\giftXiaoRen_TanSuo.png",
-        "action": "Click",
-        "post_delay": 500,
-        "next": [
-            "28",
-            "tansuo"
-        ],
-        "interrupt": [
-            "jieShuTanSuo",
-            "huoQuJiangLi"
-        ]
-    },
-    "huoQuJiangLi": {
-        "recognition": "TemplateMatch",
-        "template": "main\\getGift.png",
-        "action": "Click",
-        "post_delay": 500,
-        "target": [
-            94,
-            480,
-            1146,
-            231
-        ]
-    },
-    "zhanDou_TanSuo": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "tanSuo\\zhanDouXiaoTuBiao.png"
-        ],
-        "post_delay": 10,
-        "action": "Click",
-        "next": [
-            "zhuJieMian"
-        ],
-        "interrupt": [
-            "tiaozhan_Shengli",
-            "tiaozhan_Fu"
-        ]
-    },
-    "FuBenZhongTuoDong": {
-        "post_delay": 500,
-        "action": "Swipe",
-        "begin": [
-            1230,
-            258,
-            0,
-            0
-        ],
-        "end": [
-            620,
-            214,
-            0,
-            0
-        ],
-        "duration": 500
-    }
+  "28": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/28.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "post_delay": 500,
+    "next": [
+      "tansuo"
+    ]
+  },
+  "tansuo": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/tanSuo.png",
+    "action": "Click",
+    "next": [
+      "Boss_TanSuo",
+      "zhanDou_TanSuo"
+    ],
+    "post_delay": 500,
+    "interrupt": [
+      "FuBenZhongTuoDong"
+    ]
+  },
+  "zhuJieMian": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/fanhui.png",
+    "action": "DoNothing",
+    "threshold": 0.8,
+    "next": [
+      "Boss_TanSuo",
+      "zhanDou_TanSuo"
+    ],
+    "interrupt": [
+      "FuBenZhongTuoDong"
+    ]
+  },
+  "Boss_TanSuo": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "tanSuo/boss.png"
+    ],
+    "action": "Click",
+    "next": [
+      "jieShuTanSuo",
+      "28",
+      "tansuo"
+    ],
+    "post_delay": 500,
+    "interrupt": [
+      "tiaozhan_Shengli",
+      "tiaozhan_Fu"
+    ]
+  },
+  "jieShuTanSuo": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/giftXiaoRen_TanSuo.png",
+    "action": "Click",
+    "post_delay": 500,
+    "next": [
+      "28",
+      "tansuo"
+    ],
+    "interrupt": [
+      "jieShuTanSuo",
+      "huoQuJiangLi"
+    ]
+  },
+  "huoQuJiangLi": {
+    "recognition": "TemplateMatch",
+    "template": "main/getGift.png",
+    "action": "Click",
+    "post_delay": 500,
+    "target": [
+      94,
+      480,
+      1146,
+      231
+    ]
+  },
+  "zhanDou_TanSuo": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "tanSuo/zhanDouXiaoTuBiao.png"
+    ],
+    "post_delay": 10,
+    "action": "Click",
+    "next": [
+      "zhuJieMian"
+    ],
+    "interrupt": [
+      "tiaozhan_Shengli",
+      "tiaozhan_Fu"
+    ]
+  },
+  "FuBenZhongTuoDong": {
+    "post_delay": 500,
+    "action": "Swipe",
+    "begin": [
+      1230,
+      258,
+      0,
+      0
+    ],
+    "end": [
+      620,
+      214,
+      0,
+      0
+    ],
+    "duration": 500
+  }
 }

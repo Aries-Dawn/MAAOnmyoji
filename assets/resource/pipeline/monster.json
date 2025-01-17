@@ -1,700 +1,700 @@
 {
-    "entry_monster": {
-        "recognition": "TemplateMatch",
-        "template": "main\\fengMo.png",
-        "action": "Click",
-        "next": [
-            "寻找封魔位置"
-        ]
-    },
-    "寻找封魔位置": {
-        "next": [
-            "寻找逢魔1",
-            "寻找逢魔2",
-            "寻找逢魔3",
-            "寻找逢魔4"
-        ]
-    },
-    "寻找逢魔1": {
-        "recognition": "TemplateMatch",
-        "template": "main\\daily_fengMo.png",
-        "roi": [
-            212,
-            116,
-            421,
-            186
-        ],
-        "action": "Click",
-        "target": [
-            532,
-            167,
-            82,
-            72
-        ],
-        "next": [
-            "已经完成四次"
-        ],
-        "interrupt": [
-            "开始逢魔"
-        ],
-        "post_delay": 1000
-    },
-    "寻找逢魔2": {
-        "recognition": "TemplateMatch",
-        "template": "main\\daily_fengMo.png",
-        "roi": [
-            637,
-            121,
-            422,
-            179
-        ],
-        "action": "Click",
-        "target": [
-            952,
-            168,
-            82,
-            81
-        ],
-        "next": [
-            "已经完成四次"
-        ],
-        "interrupt": [
-            "开始逢魔"
-        ],
-        "post_delay": 1000
-    },
-    "寻找逢魔3": {
-        "recognition": "TemplateMatch",
-        "template": "main\\daily_fengMo.png",
-        "roi": [
-            224,
-            303,
-            401,
-            160
-        ],
-        "action": "Click",
-        "target": [
-            539,
-            342,
-            70,
-            72
-        ],
-        "next": [
-            "已经完成四次"
-        ],
-        "interrupt": [
-            "开始逢魔"
-        ],
-        "post_delay": 1000
-    },
-    "寻找逢魔4": {
-        "recognition": "TemplateMatch",
-        "template": "main\\daily_fengMo.png",
-        "roi": [
-            635,
-            295,
-            417,
-            172
-        ],
-        "action": "Click",
-        "target": [
-            970,
-            355,
-            57,
-            59
-        ],
-        "next": [
-            "已经完成四次"
-        ],
-        "interrupt": [
-            "开始逢魔"
-        ],
-        "post_delay": 1000
-    },
-    "开始逢魔": {
-        "recognition": "TemplateMatch",
-        "template": "main\\4timesFengMo.png",
-        "action": "Click",
-        "target": [
-            1130,
-            595,
-            105,
-            95
-        ],
-        "post_delay": 3000
-    },
-    "已经完成四次": {
-        "recognition": "TemplateMatch",
-        "template": "main\\4timesFengMo.png",
-        "roi": [
-            1178,
-            264,
-            98,
-            84
-        ],
-        "inverse": true,
-        "action": "DoNothing",
-        "next": [
-            "收获逢魔奖励"
-        ]
-    },
-    "收获逢魔奖励": {
-        "action": "Click",
-        "target": [
-            1210,
-            210,
-            47,
-            49
-        ],
-        "post_delay": 5000,
-        "next": [
-            "首领"
-        ]
-    },
-    "首领": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\shouLing.png",
-        "action": "Click",
-        "next": [
-            "鬼灵",
-            "蜃气楼",
-            "荒骷髅",
-            "地震鲶"
-        ]
-    },
-    "地震鲶": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\diZhanNian.png",
-        "action": "DoNothing",
-        "next": [
-            "更换御魂_地震鲶"
-        ]
-    },
-    "荒骷髅": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\HuangKuLou.png",
-        "action": "DoNothing",
-        "next": [
-            "更换御魂_荒骷髅"
-        ]
-    },
-    "蜃气楼": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\shenQiLou.png",
-        "action": "DoNothing",
-        "next": [
-            "更换御魂_鬼灵"
-        ]
-    },
-    "鬼灵": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\guiLing.png",
-        "action": "DoNothing",
-        "next": [
-            "更换御魂_鬼灵"
-        ]
-    },
-    "更换御魂_地震鲶": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\shiShenLu.png",
-        "roi": [
-            394,
-            588,
-            877,
-            131
-        ],
-        "action": "Click",
-        "next": [
-            "寻找预设_逢魔_地震鲶"
-        ]
-    },
-    "寻找预设_逢魔_地震鲶": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\yuShe.png",
-        "roi": [
-            24,
-            36,
-            490,
-            156
-        ],
-        "action": "Click",
-        "next": [
-            "寻找逢魔御魂1_地震鲶",
-            "寻找逢魔御魂2_地震鲶"
-        ],
-        "interrupt": [
-            "回到预设顶部"
-        ]
-    },
-    "寻找逢魔御魂1_地震鲶": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\fengMo.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "next": [
-            "寻找_地震鲶"
-        ],
-        "interrupt": [
-            "式神录回到顶部"
-        ]
-    },
-    "寻找逢魔御魂2_地震鲶": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\fengMo2.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "next": [
-            "寻找_荒骷髅"
-        ],
-        "interrupt": [
-            "式神录回到顶部"
-        ]
-    },
-    "寻找_地震鲶": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "shiShenLu\\diZhanNian_YieHuangHun.png",
-            "shiShenLu\\diZhanNian_YieHuangHun2.png"
-        ],
-        "action": "Click",
-        "target_offset": [
-            400,
-            0,
-            -125,
-            0
-        ],
-        "post_delay": 2000,
-        "next": [
-            "确定"
-        ],
-        "interrupt": [
-            "已换好"
-        ]
-    },
-    "更换御魂_荒骷髅": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\shiShenLu.png",
-        "roi": [
-            394,
-            588,
-            877,
-            131
-        ],
-        "action": "Click",
-        "next": [
-            "寻找预设_逢魔_荒骷髅"
-        ]
-    },
-    "寻找预设_逢魔_荒骷髅": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\yuShe.png",
-        "roi": [
-            24,
-            36,
-            490,
-            156
-        ],
-        "action": "Click",
-        "next": [
-            "寻找逢魔御魂1_荒骷髅",
-            "寻找逢魔御魂2_荒骷髅"
-        ],
-        "interrupt": [
-            "回到预设顶部"
-        ]
-    },
-    "寻找逢魔御魂1_荒骷髅": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\fengMo.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "next": [
-            "寻找_荒骷髅"
-        ],
-        "interrupt": [
-            "式神录回到顶部"
-        ]
-    },
-    "寻找逢魔御魂2_荒骷髅": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\fengMo2.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "next": [
-            "寻找_荒骷髅"
-        ],
-        "interrupt": [
-            "式神录回到顶部"
-        ]
-    },
-    "寻找_荒骷髅": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "shiShenLu\\HuangKuLou1.png",
-            "shiShenLu\\HuangKuLou1.png"
-        ],
-        "action": "Click",
-        "target_offset": [
-            400,
-            0,
-            -45,
-            0
-        ],
-        "post_delay": 2000,
-        "next": [
-            "确定"
-        ],
-        "interrupt": [
-            "已换好"
-        ]
-    },
-    "更换御魂_鬼灵": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\shiShenLu.png",
-        "roi": [
-            394,
-            588,
-            877,
-            131
-        ],
-        "action": "Click",
-        "next": [
-            "寻找预设_逢魔"
-        ]
-    },
-    "寻找预设_逢魔": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\yuShe.png",
-        "roi": [
-            24,
-            36,
-            490,
-            156
-        ],
-        "action": "Click",
-        "next": [
-            "寻找逢魔御魂1",
-            "寻找逢魔御魂2"
-        ],
-        "interrupt": [
-            "回到预设顶部"
-        ]
-    },
-    "回到预设顶部": {
-        "action": "Swipe",
-        "begin": [
-            1189,
-            173,
-            0,
-            0
-        ],
-        "end": [
-            1190,
-            609,
-            0,
-            0
-        ],
-        "duration": 500
-    },
-    "寻找逢魔御魂1": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\fengMo.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "next": [
-            "寻找鬼灵"
-        ],
-        "interrupt": [
-            "式神录回到顶部"
-        ]
-    },
-    "寻找逢魔御魂2": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\fengMo2.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "next": [
-            "寻找鬼灵"
-        ],
-        "interrupt": [
-            "式神录回到顶部"
-        ]
-    },
-    "式神录回到顶部": {
-        "action": "Swipe",
-        "begin": [
-            912,
-            173,
-            0,
-            0
-        ],
-        "end": [
-            929,
-            609,
-            0,
-            0
-        ],
-        "duration": 500
-    },
-    "寻找鬼灵": {
-        "action": "Click",
-        "target": [
-            971,
-            136,
-            35,
-            34
-        ],
-        "post_delay": 2000,
-        "next": [
-            "确定"
-        ],
-        "interrupt": [
-            "已换好"
-        ]
-    },
-    "确定": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\queDing.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "post_delay": 1000,
-        "next": [
-            "已换好"
-        ]
-    },
-    "已换好": {
-        "action": "Click",
-        "target": [
-            18,
-            9,
-            44,
-            41
-        ],
-        "post_delay": 2000,
-        "next": [
-            "逢魔极",
-            "逢魔首领"
-        ]
-    },
-    "逢魔首领": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\shouLing.png",
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "点击首领"
-        ]
-    },
-    "逢魔极": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\fengMoJi.png",
-        "roi": [
-            844,
-            605,
-            143,
-            114
-        ],
-        "action": "Click",
-        "post_delay": 2000,
-        "next": [
-            "点击首领"
-        ]
-    },
-    "点击首领": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\jiJie.png",
-        "action": "Click",
-        "roi": [
-            391,
-            168,
-            534,
-            392
-        ],
-        "target_offset": [
-            0,
-            -90,
-            90,
-            90
-        ],
-        "next": [
-            "集结挑战"
-        ],
-        "interrupt": [
-            "点击首领"
-        ]
-    },
-    "集结挑战": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\jiJieTiaoZhan.png",
-        "action": "Click",
-        "roi": [
-            1051,
-            505,
-            159,
-            146
-        ],
-        "post_delay": 2000,
-        "next": [
-            "进入了吗"
-        ],
-        "interrupt": [
-            "重新寻找"
-        ]
-    },
-    "重新寻找": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\jiJieTiaoZhan.png",
-        "action": "Click",
-        "pre_delay": 1000,
-        "target": [
-            1110,
-            46,
-            54,
-            55
-        ],
-        "next": [
-            "进入了吗",
-            "逢魔极",
-            "逢魔首领"
-        ]
-    },
-    "进入了吗": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\zhenRongYuShe.png",
-        "action": "DoNothing",
-        "timeout": 2000000,
-        "next": [
-            "确认进入"
-        ],
-        "interrupt": [
-            "寻找盒子"
-        ]
-    },
-    "寻找盒子": {
-        "recognition": "FeatureMatch",
-        "template": "common\\box.png",
-        "roi": [
-            398,
-            164,
-            881,
-            555
-        ],
-        "action": "Click",
-        "timeout": 2000000,
-        "post_delay": 1000,
-        "next": [
-            "点击空白"
-        ]
-    },
-    "点击空白": {
-        "action": "Click",
-        "target": [
-            302,
-            517,
-            783,
-            91
-        ]
-    },
-    "确认进入": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\jinruZhanDou.png",
-        "timeout": 200000,
-        "roi": [
-            396,
-            256,
-            531,
-            440
-        ],
-        "threshold": 0.6,
-        "action": "Click",
-        "post_delay": 5000,
-        "next": [
-            "准备_逢魔"
-        ]
-    },
-    "准备_逢魔": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\zhunBei.png",
-        "action": "Click",
-        "next": [
-            "结束首领战斗"
-        ]
-    },
-    "结束首领战斗": {
-        "recognition": "TemplateMatch",
-        "template": "zhandou\\shengli_fengMo.png",
-        "roi": [
-            268,
-            0,
-            794,
-            316
-        ],
-        "action": "Click",
-        "target": [
-            946,
-            490,
-            328,
-            229
-        ],
-        "post_delay": 2000,
-        "timeout": 5000000,
-        "next": [
-            "福袋结算"
-        ]
-    },
-    "福袋结算": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\fu.png",
-        "action": "Click",
-        "target": [
-            946,
-            490,
-            328,
-            229
-        ],
-        "next": [
-            "结束逢魔"
-        ]
-    },
-    "结束逢魔": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\zhenRongYuShe.png",
-        "action": "Click",
-        "target": [
-            18,
-            9,
-            44,
-            41
-        ],
-        "next": [
-            "逢魔退出确定"
-        ]
-    },
-    "逢魔退出确定": {
-        "recognition": "TemplateMatch",
-        "template": "common\\queRen.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "post_delay": 1000,
-        "next": [
-            "退出逢魔之时"
-        ]
-    },
-    "退出逢魔之时": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\shouLing.png",
-        "action": "Click",
-        "target": [
-            14,
-            6,
-            75,
-            80
-        ],
-        "next": [
-            "结束逢魔最后一步"
-        ]
-    },
-    "结束逢魔最后一步": {
-        "action": "StopTask"
-    }
+  "entry_monster": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/fengMo.png",
+    "action": "Click",
+    "next": [
+      "寻找封魔位置"
+    ]
+  },
+  "寻找封魔位置": {
+    "next": [
+      "寻找逢魔1",
+      "寻找逢魔2",
+      "寻找逢魔3",
+      "寻找逢魔4"
+    ]
+  },
+  "寻找逢魔1": {
+    "recognition": "TemplateMatch",
+    "template": "main/daily_fengMo.png",
+    "roi": [
+      212,
+      116,
+      421,
+      186
+    ],
+    "action": "Click",
+    "target": [
+      532,
+      167,
+      82,
+      72
+    ],
+    "next": [
+      "已经完成四次"
+    ],
+    "interrupt": [
+      "开始逢魔"
+    ],
+    "post_delay": 1000
+  },
+  "寻找逢魔2": {
+    "recognition": "TemplateMatch",
+    "template": "main/daily_fengMo.png",
+    "roi": [
+      637,
+      121,
+      422,
+      179
+    ],
+    "action": "Click",
+    "target": [
+      952,
+      168,
+      82,
+      81
+    ],
+    "next": [
+      "已经完成四次"
+    ],
+    "interrupt": [
+      "开始逢魔"
+    ],
+    "post_delay": 1000
+  },
+  "寻找逢魔3": {
+    "recognition": "TemplateMatch",
+    "template": "main/daily_fengMo.png",
+    "roi": [
+      224,
+      303,
+      401,
+      160
+    ],
+    "action": "Click",
+    "target": [
+      539,
+      342,
+      70,
+      72
+    ],
+    "next": [
+      "已经完成四次"
+    ],
+    "interrupt": [
+      "开始逢魔"
+    ],
+    "post_delay": 1000
+  },
+  "寻找逢魔4": {
+    "recognition": "TemplateMatch",
+    "template": "main/daily_fengMo.png",
+    "roi": [
+      635,
+      295,
+      417,
+      172
+    ],
+    "action": "Click",
+    "target": [
+      970,
+      355,
+      57,
+      59
+    ],
+    "next": [
+      "已经完成四次"
+    ],
+    "interrupt": [
+      "开始逢魔"
+    ],
+    "post_delay": 1000
+  },
+  "开始逢魔": {
+    "recognition": "TemplateMatch",
+    "template": "main/4timesFengMo.png",
+    "action": "Click",
+    "target": [
+      1130,
+      595,
+      105,
+      95
+    ],
+    "post_delay": 3000
+  },
+  "已经完成四次": {
+    "recognition": "TemplateMatch",
+    "template": "main/4timesFengMo.png",
+    "roi": [
+      1178,
+      264,
+      98,
+      84
+    ],
+    "inverse": true,
+    "action": "DoNothing",
+    "next": [
+      "收获逢魔奖励"
+    ]
+  },
+  "收获逢魔奖励": {
+    "action": "Click",
+    "target": [
+      1210,
+      210,
+      47,
+      49
+    ],
+    "post_delay": 5000,
+    "next": [
+      "首领"
+    ]
+  },
+  "首领": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/shouLing.png",
+    "action": "Click",
+    "next": [
+      "鬼灵",
+      "蜃气楼",
+      "荒骷髅",
+      "地震鲶"
+    ]
+  },
+  "地震鲶": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/diZhanNian.png",
+    "action": "DoNothing",
+    "next": [
+      "更换御魂_地震鲶"
+    ]
+  },
+  "荒骷髅": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/HuangKuLou.png",
+    "action": "DoNothing",
+    "next": [
+      "更换御魂_荒骷髅"
+    ]
+  },
+  "蜃气楼": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/shenQiLou.png",
+    "action": "DoNothing",
+    "next": [
+      "更换御魂_鬼灵"
+    ]
+  },
+  "鬼灵": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/guiLing.png",
+    "action": "DoNothing",
+    "next": [
+      "更换御魂_鬼灵"
+    ]
+  },
+  "更换御魂_地震鲶": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/shiShenLu.png",
+    "roi": [
+      394,
+      588,
+      877,
+      131
+    ],
+    "action": "Click",
+    "next": [
+      "寻找预设_逢魔_地震鲶"
+    ]
+  },
+  "寻找预设_逢魔_地震鲶": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/yuShe.png",
+    "roi": [
+      24,
+      36,
+      490,
+      156
+    ],
+    "action": "Click",
+    "next": [
+      "寻找逢魔御魂1_地震鲶",
+      "寻找逢魔御魂2_地震鲶"
+    ],
+    "interrupt": [
+      "回到预设顶部"
+    ]
+  },
+  "寻找逢魔御魂1_地震鲶": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/fengMo.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "next": [
+      "寻找_地震鲶"
+    ],
+    "interrupt": [
+      "式神录回到顶部"
+    ]
+  },
+  "寻找逢魔御魂2_地震鲶": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/fengMo2.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "next": [
+      "寻找_荒骷髅"
+    ],
+    "interrupt": [
+      "式神录回到顶部"
+    ]
+  },
+  "寻找_地震鲶": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "shiShenLu/diZhanNian_YieHuangHun.png",
+      "shiShenLu/diZhanNian_YieHuangHun2.png"
+    ],
+    "action": "Click",
+    "target_offset": [
+      400,
+      0,
+      -125,
+      0
+    ],
+    "post_delay": 2000,
+    "next": [
+      "确定"
+    ],
+    "interrupt": [
+      "已换好"
+    ]
+  },
+  "更换御魂_荒骷髅": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/shiShenLu.png",
+    "roi": [
+      394,
+      588,
+      877,
+      131
+    ],
+    "action": "Click",
+    "next": [
+      "寻找预设_逢魔_荒骷髅"
+    ]
+  },
+  "寻找预设_逢魔_荒骷髅": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/yuShe.png",
+    "roi": [
+      24,
+      36,
+      490,
+      156
+    ],
+    "action": "Click",
+    "next": [
+      "寻找逢魔御魂1_荒骷髅",
+      "寻找逢魔御魂2_荒骷髅"
+    ],
+    "interrupt": [
+      "回到预设顶部"
+    ]
+  },
+  "寻找逢魔御魂1_荒骷髅": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/fengMo.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "next": [
+      "寻找_荒骷髅"
+    ],
+    "interrupt": [
+      "式神录回到顶部"
+    ]
+  },
+  "寻找逢魔御魂2_荒骷髅": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/fengMo2.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "next": [
+      "寻找_荒骷髅"
+    ],
+    "interrupt": [
+      "式神录回到顶部"
+    ]
+  },
+  "寻找_荒骷髅": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "shiShenLu/HuangKuLou1.png",
+      "shiShenLu/HuangKuLou1.png"
+    ],
+    "action": "Click",
+    "target_offset": [
+      400,
+      0,
+      -45,
+      0
+    ],
+    "post_delay": 2000,
+    "next": [
+      "确定"
+    ],
+    "interrupt": [
+      "已换好"
+    ]
+  },
+  "更换御魂_鬼灵": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/shiShenLu.png",
+    "roi": [
+      394,
+      588,
+      877,
+      131
+    ],
+    "action": "Click",
+    "next": [
+      "寻找预设_逢魔"
+    ]
+  },
+  "寻找预设_逢魔": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/yuShe.png",
+    "roi": [
+      24,
+      36,
+      490,
+      156
+    ],
+    "action": "Click",
+    "next": [
+      "寻找逢魔御魂1",
+      "寻找逢魔御魂2"
+    ],
+    "interrupt": [
+      "回到预设顶部"
+    ]
+  },
+  "回到预设顶部": {
+    "action": "Swipe",
+    "begin": [
+      1189,
+      173,
+      0,
+      0
+    ],
+    "end": [
+      1190,
+      609,
+      0,
+      0
+    ],
+    "duration": 500
+  },
+  "寻找逢魔御魂1": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/fengMo.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "next": [
+      "寻找鬼灵"
+    ],
+    "interrupt": [
+      "式神录回到顶部"
+    ]
+  },
+  "寻找逢魔御魂2": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/fengMo2.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "next": [
+      "寻找鬼灵"
+    ],
+    "interrupt": [
+      "式神录回到顶部"
+    ]
+  },
+  "式神录回到顶部": {
+    "action": "Swipe",
+    "begin": [
+      912,
+      173,
+      0,
+      0
+    ],
+    "end": [
+      929,
+      609,
+      0,
+      0
+    ],
+    "duration": 500
+  },
+  "寻找鬼灵": {
+    "action": "Click",
+    "target": [
+      971,
+      136,
+      35,
+      34
+    ],
+    "post_delay": 2000,
+    "next": [
+      "确定"
+    ],
+    "interrupt": [
+      "已换好"
+    ]
+  },
+  "确定": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/queDing.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "post_delay": 1000,
+    "next": [
+      "已换好"
+    ]
+  },
+  "已换好": {
+    "action": "Click",
+    "target": [
+      18,
+      9,
+      44,
+      41
+    ],
+    "post_delay": 2000,
+    "next": [
+      "逢魔极",
+      "逢魔首领"
+    ]
+  },
+  "逢魔首领": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/shouLing.png",
+    "action": "Click",
+    "post_delay": 2000,
+    "next": [
+      "点击首领"
+    ]
+  },
+  "逢魔极": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/fengMoJi.png",
+    "roi": [
+      844,
+      605,
+      143,
+      114
+    ],
+    "action": "Click",
+    "post_delay": 2000,
+    "next": [
+      "点击首领"
+    ]
+  },
+  "点击首领": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/jiJie.png",
+    "action": "Click",
+    "roi": [
+      391,
+      168,
+      534,
+      392
+    ],
+    "target_offset": [
+      0,
+      -90,
+      90,
+      90
+    ],
+    "next": [
+      "集结挑战"
+    ],
+    "interrupt": [
+      "点击首领"
+    ]
+  },
+  "集结挑战": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/jiJieTiaoZhan.png",
+    "action": "Click",
+    "roi": [
+      1051,
+      505,
+      159,
+      146
+    ],
+    "post_delay": 2000,
+    "next": [
+      "进入了吗"
+    ],
+    "interrupt": [
+      "重新寻找"
+    ]
+  },
+  "重新寻找": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/jiJieTiaoZhan.png",
+    "action": "Click",
+    "pre_delay": 1000,
+    "target": [
+      1110,
+      46,
+      54,
+      55
+    ],
+    "next": [
+      "进入了吗",
+      "逢魔极",
+      "逢魔首领"
+    ]
+  },
+  "进入了吗": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/zhenRongYuShe.png",
+    "action": "DoNothing",
+    "timeout": 2000000,
+    "next": [
+      "确认进入"
+    ],
+    "interrupt": [
+      "寻找盒子"
+    ]
+  },
+  "寻找盒子": {
+    "recognition": "FeatureMatch",
+    "template": "common/box.png",
+    "roi": [
+      398,
+      164,
+      881,
+      555
+    ],
+    "action": "Click",
+    "timeout": 2000000,
+    "post_delay": 1000,
+    "next": [
+      "点击空白"
+    ]
+  },
+  "点击空白": {
+    "action": "Click",
+    "target": [
+      302,
+      517,
+      783,
+      91
+    ]
+  },
+  "确认进入": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/jinruZhanDou.png",
+    "timeout": 200000,
+    "roi": [
+      396,
+      256,
+      531,
+      440
+    ],
+    "threshold": 0.6,
+    "action": "Click",
+    "post_delay": 5000,
+    "next": [
+      "准备_逢魔"
+    ]
+  },
+  "准备_逢魔": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/zhunBei.png",
+    "action": "Click",
+    "next": [
+      "结束首领战斗"
+    ]
+  },
+  "结束首领战斗": {
+    "recognition": "TemplateMatch",
+    "template": "zhandou/shengli_fengMo.png",
+    "roi": [
+      268,
+      0,
+      794,
+      316
+    ],
+    "action": "Click",
+    "target": [
+      946,
+      490,
+      328,
+      229
+    ],
+    "post_delay": 2000,
+    "timeout": 5000000,
+    "next": [
+      "福袋结算"
+    ]
+  },
+  "福袋结算": {
+    "recognition": "TemplateMatch",
+    "template": "tanSuo/fu.png",
+    "action": "Click",
+    "target": [
+      946,
+      490,
+      328,
+      229
+    ],
+    "next": [
+      "结束逢魔"
+    ]
+  },
+  "结束逢魔": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/zhenRongYuShe.png",
+    "action": "Click",
+    "target": [
+      18,
+      9,
+      44,
+      41
+    ],
+    "next": [
+      "逢魔退出确定"
+    ]
+  },
+  "逢魔退出确定": {
+    "recognition": "TemplateMatch",
+    "template": "common/queRen.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "post_delay": 1000,
+    "next": [
+      "退出逢魔之时"
+    ]
+  },
+  "退出逢魔之时": {
+    "recognition": "TemplateMatch",
+    "template": "FengMo/shouLing.png",
+    "action": "Click",
+    "target": [
+      14,
+      6,
+      75,
+      80
+    ],
+    "next": [
+      "结束逢魔最后一步"
+    ]
+  },
+  "结束逢魔最后一步": {
+    "action": "StopTask"
+  }
 }

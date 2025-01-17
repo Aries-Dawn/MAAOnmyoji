@@ -1,148 +1,148 @@
 {
-    "勾玉盒子": {
-        "recognition": "TemplateMatch",
-        "template": "main\\box_Magatama.png",
-        "action": "Click",
-        "post_delay": 500,
-        "next": [
-            "获得奖励"
-        ],
-        "interrupt": []
-    },
-    "体力小人": {
-        "recognition": "TemplateMatch",
-        "template": "main\\sushiGift.png",
-        "action": "Click",
-        "next": [
-            "获得奖励"
-        ],
-        "interrupt": []
-    },
-    "勾玉小人": {
-        "recognition": "TemplateMatch",
-        "template": "main\\magatamaGift.png",
-        "action": "Click",
-        "next": [
-            "获得奖励"
-        ],
-        "interrupt": []
-    },
-    "获得奖励": {
-        "recognition": "TemplateMatch",
-        "template": "main\\getGift.png",
-        "action": "Click",
-        "target": [
-            22,
-            481,
-            1238,
-            228
-        ]
-    },
-    "签到": {
-        "recognition": "TemplateMatch",
-        "template": "main\\qianDao.png",
-        "action": "Click",
-        "roi": [
-            221,
-            460,
-            145,
-            134
-        ],
-        "post_delay": 1000,
-        "next": [
-            "抽签"
-        ]
-    },
-    "抽签": {
-        "recognition": "TemplateMatch",
-        "template": "main\\meiRiYiQian.png",
-        "action": "Click",
-        "post_delay": 1000,
-        "next": [
-            "关闭抽签界面"
-        ]
-    },
-    "关闭抽签界面": {
-        "action": "Click",
-        "target": [
-            841,
-            107,
-            67,
-            26
-        ]
-    },
-    "金色签到": {
-        "recognition": "TemplateMatch",
-        "template": "main\\GoldQianDao.png",
-        "action": "Click",
-        "roi": [
-            221,
-            460,
-            145,
-            134
-        ],
-        "post_delay": 1000,
-        "next": [
-            "获得奖励"
-        ]
-    },
-    "邮箱奖励": {
-        "recognition": "TemplateMatch",
-        "template": "main\\Mail.png",
-        "action": "Click",
-        "next": [
-            "全部领取"
-        ]
-    },
-    "全部领取": {
-        "recognition": "TemplateMatch",
-        "template": "main\\quanBuLingQu.png",
-        "action": "Click",
-        "next": [
-            "获得奖励",
-            "确定"
-        ]
-    },
-    "确定-邮箱": {
-        "recognition": "TemplateMatch",
-        "template": "shiShenLu\\queDing.png",
-        "action": "Click",
-        "threshold": 0.9,
-        "post_delay": 1000,
-        "next": [
-            "获得奖励"
-        ]
-    },
-    "关闭": {
-        "recognition": "TemplateMatch",
-        "template": "common\\croos-mail.png",
-        "action": "Click",
-        "post_delay": 1000
-    },
-    "dailyGift": {
-        "next": [
-            "主界面领取结束"
-        ],
-        "interrupt": [
-            "勾玉盒子",
-            "体力小人",
-            "勾玉小人",
-            "签到",
-            "金色签到",
-            "关闭"
-        ]
-    },
-    "主界面领取结束": {
-        "recognition": "TemplateMatch",
-        "template": [
-            "main\\qianDao.png",
-            "main\\box_Magatama.png",
-            "main\\sushiGift.png",
-            "main\\magatamaGift.png",
-            "main\\GoldQianDao.png",
-            "common\\croos-mail.png"
-        ],
-        "inverse": true,
-        "action": "DoNothing"
-    }
+  "勾玉盒子": {
+    "recognition": "TemplateMatch",
+    "template": "main/box_Magatama.png",
+    "action": "Click",
+    "post_delay": 500,
+    "next": [
+      "获得奖励"
+    ],
+    "interrupt": []
+  },
+  "体力小人": {
+    "recognition": "TemplateMatch",
+    "template": "main/sushiGift.png",
+    "action": "Click",
+    "next": [
+      "获得奖励"
+    ],
+    "interrupt": []
+  },
+  "勾玉小人": {
+    "recognition": "TemplateMatch",
+    "template": "main/magatamaGift.png",
+    "action": "Click",
+    "next": [
+      "获得奖励"
+    ],
+    "interrupt": []
+  },
+  "获得奖励": {
+    "recognition": "TemplateMatch",
+    "template": "main/getGift.png",
+    "action": "Click",
+    "target": [
+      22,
+      481,
+      1238,
+      228
+    ]
+  },
+  "签到": {
+    "recognition": "TemplateMatch",
+    "template": "main/qianDao.png",
+    "action": "Click",
+    "roi": [
+      221,
+      460,
+      145,
+      134
+    ],
+    "post_delay": 1000,
+    "next": [
+      "抽签"
+    ]
+  },
+  "抽签": {
+    "recognition": "TemplateMatch",
+    "template": "main/meiRiYiQian.png",
+    "action": "Click",
+    "post_delay": 1000,
+    "next": [
+      "关闭抽签界面"
+    ]
+  },
+  "关闭抽签界面": {
+    "action": "Click",
+    "target": [
+      841,
+      107,
+      67,
+      26
+    ]
+  },
+  "金色签到": {
+    "recognition": "TemplateMatch",
+    "template": "main/GoldQianDao.png",
+    "action": "Click",
+    "roi": [
+      221,
+      460,
+      145,
+      134
+    ],
+    "post_delay": 1000,
+    "next": [
+      "获得奖励"
+    ]
+  },
+  "邮箱奖励": {
+    "recognition": "TemplateMatch",
+    "template": "main/Mail.png",
+    "action": "Click",
+    "next": [
+      "全部领取"
+    ]
+  },
+  "全部领取": {
+    "recognition": "TemplateMatch",
+    "template": "main/quanBuLingQu.png",
+    "action": "Click",
+    "next": [
+      "获得奖励",
+      "确定"
+    ]
+  },
+  "确定-邮箱": {
+    "recognition": "TemplateMatch",
+    "template": "shiShenLu/queDing.png",
+    "action": "Click",
+    "threshold": 0.9,
+    "post_delay": 1000,
+    "next": [
+      "获得奖励"
+    ]
+  },
+  "关闭": {
+    "recognition": "TemplateMatch",
+    "template": "common/croos-mail.png",
+    "action": "Click",
+    "post_delay": 1000
+  },
+  "dailyGift": {
+    "next": [
+      "主界面领取结束"
+    ],
+    "interrupt": [
+      "勾玉盒子",
+      "体力小人",
+      "勾玉小人",
+      "签到",
+      "金色签到",
+      "关闭"
+    ]
+  },
+  "主界面领取结束": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "main/qianDao.png",
+      "main/box_Magatama.png",
+      "main/sushiGift.png",
+      "main/magatamaGift.png",
+      "main/GoldQianDao.png",
+      "common/croos-mail.png"
+    ],
+    "inverse": true,
+    "action": "DoNothing"
+  }
 }
