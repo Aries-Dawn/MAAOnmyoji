@@ -121,7 +121,7 @@
             105,
             95
         ],
-        "post_delay": 2000
+        "post_delay": 3000
     },
     "已经完成四次": {
         "recognition": "TemplateMatch",
@@ -158,7 +158,16 @@
         "next": [
             "鬼灵",
             "蜃气楼",
-            "荒骷髅"
+            "荒骷髅",
+            "地震鲶"
+        ]
+    },
+    "地震鲶": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\diZhanNian.png",
+        "action": "DoNothing",
+        "next": [
+            "更换御魂_地震鲶"
         ]
     },
     "荒骷髅": {
@@ -183,6 +192,83 @@
         "action": "DoNothing",
         "next": [
             "更换御魂_鬼灵"
+        ]
+    },
+    "更换御魂_地震鲶": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\shiShenLu.png",
+        "roi": [
+            394,
+            588,
+            877,
+            131
+        ],
+        "action": "Click",
+        "next": [
+            "寻找预设_逢魔_地震鲶"
+        ]
+    },
+    "寻找预设_逢魔_地震鲶": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\yuShe.png",
+        "roi": [
+            24,
+            36,
+            490,
+            156
+        ],
+        "action": "Click",
+        "next": [
+            "寻找逢魔御魂1_地震鲶",
+            "寻找逢魔御魂2_地震鲶"
+        ],
+        "interrupt": [
+            "回到预设顶部"
+        ]
+    },
+    "寻找逢魔御魂1_地震鲶": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\fengMo.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "next": [
+            "寻找_地震鲶"
+        ],
+        "interrupt": [
+            "式神录回到顶部"
+        ]
+    },
+    "寻找逢魔御魂2_地震鲶": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\fengMo2.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "next": [
+            "寻找_荒骷髅"
+        ],
+        "interrupt": [
+            "式神录回到顶部"
+        ]
+    },
+    "寻找_地震鲶": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "shiShenLu\\diZhanNian_YieHuangHun.png",
+            "shiShenLu\\diZhanNian_YieHuangHun2.png"
+        ],
+        "action": "Click",
+        "target_offset": [
+            400,
+            0,
+            -125,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "确定"
+        ],
+        "interrupt": [
+            "已换好"
         ]
     },
     "更换御魂_荒骷髅": {
@@ -468,7 +554,8 @@
         ],
         "next": [
             "进入了吗",
-            "点击首领"
+            "逢魔极",
+            "逢魔首领"
         ]
     },
     "进入了吗": {
@@ -486,6 +573,12 @@
     "寻找盒子": {
         "recognition": "FeatureMatch",
         "template": "common\\box.png",
+        "roi": [
+            398,
+            164,
+            881,
+            555
+        ],
         "action": "Click",
         "timeout": 2000000,
         "post_delay": 1000,
@@ -544,7 +637,7 @@
             229
         ],
         "post_delay": 2000,
-        "timeout": 2000000,
+        "timeout": 5000000,
         "next": [
             "福袋结算"
         ]
