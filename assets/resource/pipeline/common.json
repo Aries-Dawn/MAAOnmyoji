@@ -41,6 +41,7 @@
     "是否回到主界面": {
         "recognition": "TemplateMatch",
         "inverse": true,
-        "template": "main\\friends.png"
+        "template": "main\\friends.png",
+        "action": "StopTask"
     }
 }
