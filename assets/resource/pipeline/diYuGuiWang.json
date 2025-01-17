@@ -4,7 +4,7 @@
         "template": "main\\explore.png",
         "action": "Click",
         "next": [
-            "开始封印"
+            "地域鬼王"
         ]
     },
     "地域鬼王": {
@@ -180,25 +180,26 @@
         "recognition": "TemplateMatch",
         "template": "common\\zhunBei.png",
         "action": "Click",
+        "timeout": 500000,
         "next": [
             "结束地鬼战斗"
         ]
     },
     "结束地鬼战斗": {
         "recognition": "TemplateMatch",
-        "template": "zhandou\\shengli_fengMo.png",
+        "template": "common\\shengLiGu.png",
         "roi": [
-            268,
-            0,
-            794,
-            316
+            256,
+            31,
+            777,
+            312
         ],
         "action": "Click",
         "target": [
-            946,
-            490,
-            328,
-            229
+            0,
+            0,
+            1268,
+            314
         ],
         "post_delay": 2000,
         "timeout": 500000,
@@ -237,13 +238,14 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "第2次"
+            "第2次没打过"
         ],
-        "interrupt": [
+        "timeout": 10000,
+        "on_error": [
             "筛选悬赏"
         ]
     },
-    "第2次": {
+    "第2次没打过": {
         "recognition": "FeatureMatch",
         "roi": [
             254,
@@ -290,10 +292,9 @@
         "action": "Click",
         "post_delay": 1000,
         "next": [
-            "挑战2"
+            "悬赏挑战1"
         ]
     },
-    "寻找满星挑战": {},
     "悬赏挑战1": {
         "recognition": "FeatureMatch",
         "template": "diGui\\tiaoZhan.png",
@@ -308,7 +309,8 @@
         "next": [
             "判断是否三蛋"
         ],
-        "interrupt": [
+        "timeout": 5000,
+        "on_error": [
             "返回筛选2"
         ]
     },
@@ -349,7 +351,8 @@
         "next": [
             "判断是否三蛋"
         ],
-        "interrupt": [
+        "timeout": 5000,
+        "on_error": [
             "返回筛选3"
         ]
     },
@@ -384,7 +387,8 @@
         "next": [
             "判断是否三蛋"
         ],
-        "interrupt": [
+        "timeout": 5000,
+        "on_error": [
             "返回筛选4"
         ]
     },
@@ -419,7 +423,8 @@
         "next": [
             "判断是否三蛋"
         ],
-        "interrupt": [
+        "timeout": 5000,
+        "on_error": [
             "返回筛选5"
         ]
     },
@@ -442,7 +447,7 @@
     },
     "上滑": {
         "recognition": "FeatureMatch",
-        "template": "diGui\\tiaoZhan_JinRu.png",
+        "template": "diGui\\tiaoZhan.png",
         "action": "Swipe",
         "begin": [
             1020,
@@ -476,9 +481,14 @@
         "next": [
             "判断是否三蛋"
         ],
-        "interrupt": [
-            "返回筛选5"
+        "timeout": 5000,
+        "on_error": [
+            "异常_什么都没"
         ]
+    },
+    "异常_什么都没": {
+        "action": "StopTask",
+        "focus": true
     },
     "判断是否三蛋": {
         "recognition": "ColorMatch",
@@ -511,12 +521,18 @@
     },
     "开始挑战悬赏地鬼": {
         "recognition": "FeatureMatch",
-        "template": "diGui\\tiaoZhan_JinRu.png",
+        "template": "diGui\\xuanShang_box.png",
         "roi": [
-            922,
-            305,
-            354,
-            414
+            38,
+            329,
+            267,
+            331
+        ],
+        "target": [
+            1104,
+            494,
+            99,
+            98
         ],
         "action": "Click",
         "post_delay": 4000,
@@ -528,28 +544,29 @@
         "recognition": "TemplateMatch",
         "template": "common\\zhunBei.png",
         "action": "Click",
+        "timeout": 500000,
         "next": [
             "结束悬赏地鬼战斗"
         ]
     },
     "结束悬赏地鬼战斗": {
-        "recognition": "FeatureMatch",
-        "template": "zhandou\\shengli_fengMo.png",
+        "recognition": "TemplateMatch",
+        "template": "common\\shengLiGu.png",
         "roi": [
-            268,
-            0,
-            794,
-            316
+            256,
+            31,
+            777,
+            312
         ],
         "action": "Click",
         "target": [
-            946,
-            490,
-            328,
-            229
+            0,
+            0,
+            1268,
+            314
         ],
         "post_delay": 2000,
-        "timeout": 500000,
+        "timeout": 20000,
         "next": [
             "结算悬赏"
         ],
@@ -588,6 +605,7 @@
             50,
             54
         ],
+        "post_delay": 1000,
         "next": [
             "从探索界面回到主界面"
         ]
