@@ -1,44 +1,57 @@
 {
-  "打开好友界面": {
-    "next": [
-      "点击好友图标"
-    ],
-    "interrupt": [
-      "打开卷轴"
-    ]
-  },
-  "点击好友图标": {
-    "recognition": "TemplateMatch",
-    "template": "main/friends.png",
-    "action": "Click",
-    "post_delay": 2000,
-    "next": [
-      "一键收取"
-    ],
-    "interrupt": [
-      "友情点"
-    ]
-  },
-  "友情点": {
-    "recognition": "TemplateMatch",
-    "template": "main/haoyou_youqingdian.png",
-    "action": "Click",
-    "post_delay": 1000,
-    "next": [
-      "一键收取"
-    ]
-  },
-  "一键收取": {
-    "recognition": "TemplateMatch",
-    "template": "main/yiJianShouQu.png",
-    "action": "Click",
-    "next": [
-      "是否回到主界面"
-    ],
-    "timeout": 5000,
-    "on_error": [
-      "获得奖励",
-      "返回"
-    ]
-  }
+    "打开好友界面": {
+        "next": [
+            "点击好友图标"
+        ],
+        "interrupt": [
+            "打开卷轴"
+        ]
+    },
+    "点击好友图标": {
+        "recognition": "TemplateMatch",
+        "template": "main\\friends.png",
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "切换为友情点"
+        ],
+        "interrupt": [
+            "一键收取"
+        ]
+    },
+    "切换为友情点": {
+        "recognition": "TemplateMatch",
+        "template": "main\\haoyou_youqingdian.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "一键收取"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "今日已收取过友情点"
+        ]
+    },
+    "今日已收取过友情点": {
+        "next": [
+            "返回",
+            "叉"
+        ],
+        "focus": true,
+        "focus_tip": "今日已收取过友情点，返回主界面"
+    },
+    "一键收取": {
+        "recognition": "TemplateMatch",
+        "template": "main\\yiJianShouQu.png",
+        "action": "Click",
+        "next": [
+            "是否回到主界面"
+        ],
+        "timeout": 5000,
+        "on_error": [
+            "获得奖励",
+            "返回",
+            "叉"
+        ]
+    }
 }

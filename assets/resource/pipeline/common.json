@@ -1,47 +1,59 @@
 {
-  "从探索界面回到主界面": {
-    "recognition": "TemplateMatch",
-    "template": "tanSuo/diGui.png",
-    "action": "Click",
-    "target": [
-      25,
-      23,
-      68,
-      72
-    ],
-    "post_delay": 3000
-  },
-  "返回": {
-    "recognition": "TemplateMatch",
-    "template": [
-      "tanSuo/fanhui.png",
-      "common/back.png",
-      "common/croos-mail.png"
-    ],
-    "roi": [
-      1,
-      1,
-      296,
-      194
-    ],
-    "action": "Click"
-  },
-  "打开卷轴": {
-    "recognition": "TemplateMatch",
-    "inverse": true,
-    "template": "main/friends.png",
-    "action": "Click",
-    "target": [
-      1176,
-      576,
-      102,
-      143
-    ]
-  },
-  "是否回到主界面": {
-    "recognition": "TemplateMatch",
-    "inverse": true,
-    "template": "main/friends.png",
-    "action": "StopTask"
-  }
+    "从探索界面回到主界面": {
+        "recognition": "TemplateMatch",
+        "template": "tanSuo\\diGui.png",
+        "action": "Click",
+        "target": [
+            25,
+            23,
+            68,
+            72
+        ],
+        "post_delay": 3000
+    },
+    "返回": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "tanSuo\\fanhui.png",
+            "common\\back.png"
+        ],
+        "roi": [
+            1,
+            1,
+            296,
+            194
+        ],
+        "action": "Click"
+    },
+    "叉": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "common\\croos-mail.png"
+        ],
+        "roi": [
+            656,
+            46,
+            623,
+            673
+        ],
+        "action": "Click"
+    },
+    "打开卷轴": {
+        "recognition": "TemplateMatch",
+        "inverse": true,
+        "template": "main\\friends.png",
+        "action": "Click",
+        "target": [
+            1176,
+            576,
+            102,
+            143
+        ]
+    },
+    "是否回到主界面": {
+        "recognition": "TemplateMatch",
+        "inverse": true,
+        "template": "main\\friends.png",
+        "action": "StopTask"
+    }
 }

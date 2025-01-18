@@ -1,114 +1,114 @@
 {
-  "阴界入口": {
-    "recognition": "TemplateMatch",
-    "template": "shiShenLu/fengMo.png",
-    "action": "Click",
-    "next": [
-      "寻找阴界位置"
-    ]
-  },
-  "寻找阴界位置": {
-    "next": [
-      "寻找阴界1",
-      "寻找阴界2",
-      "寻找阴界3",
-      "寻找阴界4"
-    ]
-  },
-  "寻找阴界1": {
-    "recognition": "TemplateMatch",
-    "template": "main/daily_yinJie.png",
-    "roi": [
-      200,
-      290,
-      438,
-      182
-    ],
-    "action": "Click",
-    "target": [
-      532,
-      167,
-      82,
-      72
-    ],
-    "next": [
-      "已经完成四次"
-    ],
-    "interrupt": [
-      "开始逢魔"
-    ],
-    "post_delay": 1000
-  },
-  "寻找阴界2": {
-    "recognition": "TemplateMatch",
-    "template": "main/daily_fengMo.png",
-    "roi": [
-      637,
-      121,
-      422,
-      179
-    ],
-    "action": "Click",
-    "target": [
-      952,
-      168,
-      82,
-      81
-    ],
-    "next": [
-      "已经完成四次"
-    ],
-    "interrupt": [
-      "开始逢魔"
-    ],
-    "post_delay": 1000
-  },
-  "寻找阴界3": {
-    "recognition": "TemplateMatch",
-    "template": "main/daily_fengMo.png",
-    "roi": [
-      224,
-      303,
-      401,
-      160
-    ],
-    "action": "Click",
-    "target": [
-      539,
-      342,
-      70,
-      72
-    ],
-    "next": [
-      "已经完成四次"
-    ],
-    "interrupt": [
-      "开始逢魔"
-    ],
-    "post_delay": 1000
-  },
-  "寻找阴界4": {
-    "recognition": "TemplateMatch",
-    "template": "main/daily_fengMo.png",
-    "roi": [
-      635,
-      295,
-      417,
-      172
-    ],
-    "action": "Click",
-    "target": [
-      970,
-      355,
-      57,
-      59
-    ],
-    "next": [
-      "已经完成四次"
-    ],
-    "interrupt": [
-      "开始逢魔"
-    ],
-    "post_delay": 1000
-  }
+    "阴界入口": {
+        "recognition": "TemplateMatch",
+        "template": "main\\fengMo.png",
+        "action": "Click",
+        "next": [
+            "寻找阴界位置"
+        ]
+    },
+    "寻找阴界位置": {
+        "next": [
+            "寻找阴界1",
+            "寻找阴界2",
+            "寻找阴界3",
+            "寻找阴界4"
+        ]
+    },
+    "寻找阴界1": {
+        "recognition": "TemplateMatch",
+        "template": "main\\daily_yinJie.png",
+        "roi": [
+            200,
+            290,
+            438,
+            182
+        ],
+        "action": "Click",
+        "target": [
+            532,
+            167,
+            82,
+            72
+        ],
+        "next": [
+            "已经完成四次"
+        ],
+        "interrupt": [
+            "开始逢魔"
+        ],
+        "post_delay": 1000
+    },
+    "寻找阴界2": {
+        "recognition": "TemplateMatch",
+        "template": "main\\daily_fengMo.png",
+        "roi": [
+            637,
+            121,
+            422,
+            179
+        ],
+        "action": "Click",
+        "target": [
+            952,
+            168,
+            82,
+            81
+        ],
+        "next": [
+            "已经完成四次"
+        ],
+        "interrupt": [
+            "开始逢魔"
+        ],
+        "post_delay": 1000
+    },
+    "寻找阴界3": {
+        "recognition": "TemplateMatch",
+        "template": "main\\daily_fengMo.png",
+        "roi": [
+            224,
+            303,
+            401,
+            160
+        ],
+        "action": "Click",
+        "target": [
+            539,
+            342,
+            70,
+            72
+        ],
+        "next": [
+            "已经完成四次"
+        ],
+        "interrupt": [
+            "开始逢魔"
+        ],
+        "post_delay": 1000
+    },
+    "寻找阴界4": {
+        "recognition": "TemplateMatch",
+        "template": "main\\daily_fengMo.png",
+        "roi": [
+            635,
+            295,
+            417,
+            172
+        ],
+        "action": "Click",
+        "target": [
+            970,
+            355,
+            57,
+            59
+        ],
+        "next": [
+            "已经完成四次"
+        ],
+        "interrupt": [
+            "开始逢魔"
+        ],
+        "post_delay": 1000
+    }
 }
