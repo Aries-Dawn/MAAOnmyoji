@@ -13,7 +13,8 @@
             "寻找逢魔2",
             "寻找逢魔3",
             "寻找逢魔4"
-        ]
+        ],
+        "interrupt": "进入活动界面"
     },
     "寻找逢魔1": {
         "recognition": "TemplateMatch",
@@ -37,7 +38,7 @@
         "interrupt": [
             "开始逢魔"
         ],
-        "post_delay": 1000
+        "post_delay": 2000
     },
     "寻找逢魔2": {
         "recognition": "TemplateMatch",
@@ -61,7 +62,7 @@
         "interrupt": [
             "开始逢魔"
         ],
-        "post_delay": 1000
+        "post_delay": 2000
     },
     "寻找逢魔3": {
         "recognition": "TemplateMatch",
@@ -85,7 +86,7 @@
         "interrupt": [
             "开始逢魔"
         ],
-        "post_delay": 1000
+        "post_delay": 2000
     },
     "寻找逢魔4": {
         "recognition": "TemplateMatch",
@@ -109,7 +110,7 @@
         "interrupt": [
             "开始逢魔"
         ],
-        "post_delay": 1000
+        "post_delay": 2000
     },
     "开始逢魔": {
         "recognition": "TemplateMatch",
@@ -134,6 +135,7 @@
         ],
         "inverse": true,
         "action": "DoNothing",
+        "post_delay": 2000,
         "next": [
             "收获逢魔奖励"
         ]
@@ -159,7 +161,18 @@
             "鬼灵",
             "蜃气楼",
             "荒骷髅",
-            "地震鲶"
+            "地震鲶",
+            "土蜘蛛",
+            "首领"
+        ]
+    },
+    "土蜘蛛": {
+        "recognition": "FeatureMatch",
+        "template": "FengMo\\mudSpider.png",
+        "action": "DoNothing",
+        "count": 20,
+        "next": [
+            "更换御魂_鬼灵"
         ]
     },
     "地震鲶": {
@@ -204,6 +217,7 @@
             131
         ],
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "寻找预设_逢魔_地震鲶"
         ]
@@ -244,7 +258,7 @@
         "action": "Click",
         "threshold": 0.9,
         "next": [
-            "寻找_荒骷髅"
+            "寻找_地震鲶"
         ],
         "interrupt": [
             "式神录回到顶部"
@@ -281,6 +295,7 @@
             131
         ],
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "寻找预设_逢魔_荒骷髅"
         ]
@@ -358,6 +373,7 @@
             131
         ],
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "寻找预设_逢魔"
         ]
@@ -504,6 +520,7 @@
         "recognition": "TemplateMatch",
         "template": "FengMo\\jiJie.png",
         "action": "Click",
+        "threshold": 0.5,
         "roi": [
             391,
             168,
@@ -524,16 +541,16 @@
         ]
     },
     "集结挑战": {
-        "recognition": "TemplateMatch",
-        "template": "FengMo\\jiJieTiaoZhan.png",
+        "recognition": "OCR",
+        "expected": "集结挑战",
+        "post_delay": 2000,
         "action": "Click",
         "roi": [
-            1051,
-            505,
-            159,
-            146
+            952,
+            459,
+            327,
+            222
         ],
-        "post_delay": 2000,
         "next": [
             "进入了吗"
         ],
@@ -616,6 +633,7 @@
         "recognition": "TemplateMatch",
         "template": "FengMo\\zhunBei.png",
         "action": "Click",
+        "timeout": 5000000,
         "next": [
             "结束首领战斗"
         ]

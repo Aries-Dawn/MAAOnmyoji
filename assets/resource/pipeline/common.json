@@ -11,6 +11,47 @@
         ],
         "post_delay": 3000
     },
+    "进入活动界面": {
+        "recognition": "TemplateMatch",
+        "template": "main\\explore.png",
+        "next": [
+            "拖动出左半边"
+        ]
+    },
+    "拖动出左半边": {
+        "action": "Swipe",
+        "begin": [
+            288,
+            657,
+            100,
+            100
+        ],
+        "end": [
+            1102,
+            651,
+            200,
+            100
+        ],
+        "duration": 1000,
+        "post_delay": 1000,
+        "next": [
+            "点击石像"
+        ]
+    },
+    "点击石像": {
+        "recognition": "TemplateMatch",
+        "template": "main\\shiXiang.png",
+        "action": "Click",
+        "post_delay": 1000,
+        "next": [
+            "进入日常"
+        ]
+    },
+    "进入日常": {
+        "recognition": "TemplateMatch",
+        "template": "main\\daily.png",
+        "action": "Click"
+    },
     "返回": {
         "recognition": "TemplateMatch",
         "template": [
@@ -52,8 +93,10 @@
     },
     "是否回到主界面": {
         "recognition": "TemplateMatch",
-        "inverse": true,
-        "template": "main\\friends.png",
+        "template": [
+            "main\\explore.png",
+            "main\\friends.png"
+        ],
         "action": "StopTask"
     }
 }

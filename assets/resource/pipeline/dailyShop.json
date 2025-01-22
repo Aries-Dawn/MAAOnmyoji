@@ -16,7 +16,23 @@
         "recognition": "TemplateMatch",
         "template": "main\\liBaoWu.png",
         "action": "Click",
-        "next": []
+        "next": [
+            "推荐"
+        ]
+    },
+    "推荐": {
+        "recognition": "OCR",
+        "expected": "推荐",
+        "roi": [
+            1142,
+            146,
+            137,
+            164
+        ],
+        "action": "Click",
+        "next": [
+            "点击每日商店礼包"
+        ]
     },
     "点击每日商店礼包": {
         "recognition": "TemplateMatch",
@@ -26,6 +42,7 @@
             "是否回到主界面"
         ],
         "interrupt": [
+            "获得奖励",
             "返回"
         ]
     }

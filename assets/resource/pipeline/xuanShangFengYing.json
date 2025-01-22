@@ -176,8 +176,10 @@
         "recognition": "TemplateMatch",
         "template": "tanSuo\\job.png",
         "action": "Click",
+        "timeout": 2000,
         "next": [
-            "前往挑战"
+            "选择挑战",
+            "选择秘闻"
         ],
         "interrupt": [
             "获得奖励"
@@ -193,16 +195,112 @@
         ]
     },
     "结束": {
-        "action": "StopTask"
+        "next": [
+            "是否回到主界面"
+        ],
+        "interrupt": [
+            "从探索界面回到主界面"
+        ]
     },
     "前往挑战": {
         "recognition": "TemplateMatch",
         "template": "tanSuo\\clickGo.png",
         "action": "Click",
         "post_delay": 600,
+        "next": []
+    },
+    "选择挑战": {
+        "recognition": "TemplateMatch",
+        "template": "tanSuo\\xuanShang.png",
+        "target_offset": [
+            448,
+            0,
+            0,
+            0
+        ],
+        "action": "Click",
+        "post_delay": 2000,
         "next": [
-            "副本探索",
             "挑战"
+        ]
+    },
+    "选择秘闻": {
+        "recognition": "TemplateMatch",
+        "template": "tanSuo\\miWen.png",
+        "action": "Click",
+        "target_offset": [
+            448,
+            0,
+            0,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "秘闻战斗"
+        ]
+    },
+    "秘闻战斗": {
+        "recognition": "TemplateMatch",
+        "template": "miWen\\tiaoZhan.png",
+        "action": "Click",
+        "target": [
+            1054,
+            558,
+            92,
+            105
+        ],
+        "next": [
+            "准备_秘闻"
+        ]
+    },
+    "准备_秘闻": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\zhunBei.png",
+        "action": "Click",
+        "timeout": 5000000,
+        "next": [
+            "结束秘闻战斗"
+        ]
+    },
+    "结束秘闻战斗": {
+        "recognition": "TemplateMatch",
+        "template": "common\\shengLiGu.png",
+        "roi": [
+            268,
+            0,
+            794,
+            316
+        ],
+        "action": "Click",
+        "target": [
+            946,
+            490,
+            328,
+            229
+        ],
+        "post_delay": 2000,
+        "timeout": 5000000,
+        "next": [
+            "福袋结算_秘闻"
+        ]
+    },
+    "福袋结算_秘闻": {
+        "recognition": "TemplateMatch",
+        "template": "tanSuo\\fu.png",
+        "action": "Click",
+        "target": [
+            946,
+            490,
+            328,
+            229
+        ],
+        "post_delay": 2000,
+        "next": [
+            "点击封印"
+        ],
+        "interrupt": [
+            "返回",
+            "叉"
         ]
     },
     "副本探索": {
@@ -274,30 +372,44 @@
         "template": "tanSuo\\tiaoZhan.png",
         "action": "Click",
         "threshold": 0.88,
+        "timeout": 5000000,
         "next": [
-            "结束战斗1"
+            "结束挑战战斗"
         ]
     },
-    "结束战斗3": {
-        "is_sub": true,
+    "结束挑战战斗": {
+        "recognition": "TemplateMatch",
+        "template": "common\\shengLiGu.png",
+        "roi": [
+            268,
+            0,
+            794,
+            316
+        ],
+        "action": "Click",
+        "target": [
+            946,
+            490,
+            328,
+            229
+        ],
+        "post_delay": 2000,
+        "timeout": 5000000,
+        "next": [
+            "福袋结算_挑战"
+        ]
+    },
+    "福袋结算_挑战": {
         "recognition": "TemplateMatch",
         "template": "tanSuo\\fu.png",
         "action": "Click",
-        "on_error": [
-            "结束战斗4"
+        "target": [
+            946,
+            490,
+            328,
+            229
         ],
-        "next": [
-            "关闭界面"
-        ]
-    },
-    "结束战斗4": {
-        "is_sub": true,
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\fu.png",
-        "action": "Click",
-        "on_error": [
-            "结束战斗3"
-        ],
+        "post_delay": 2000,
         "next": [
             "关闭界面"
         ]
