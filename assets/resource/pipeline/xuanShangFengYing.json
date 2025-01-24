@@ -1,6 +1,153 @@
 {
     "悬赏封印-入口": {
         "next": [
+            "更换御魂_悬赏"
+        ],
+        "interrupt": [
+            "打开卷轴"
+        ]
+    },
+    "更换御魂_悬赏": {
+        "recognition": "TemplateMatch",
+        "template": "main\\shiShenLu.png",
+        "roi": [
+            1018,
+            529,
+            261,
+            190
+        ],
+        "action": "Click",
+        "post_delay": 5000,
+        "next": [
+            "寻找预设_悬赏"
+        ]
+    },
+    "寻找预设_悬赏": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\yuShe.png",
+        "roi": [
+            24,
+            36,
+            490,
+            156
+        ],
+        "action": "Click",
+        "next": [
+            "寻找悬赏御魂1",
+            "寻找悬赏御魂2"
+        ],
+        "interrupt": [
+            "回到预设顶部"
+        ]
+    },
+    "寻找悬赏御魂1": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\riChang.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "next": [
+            "寻找_悬赏"
+        ],
+        "interrupt": [
+            "式神录回到顶部"
+        ]
+    },
+    "寻找悬赏御魂2": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\riChang2.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "next": [
+            "寻找_悬赏"
+        ],
+        "interrupt": [
+            "式神录回到顶部"
+        ]
+    },
+    "寻找_悬赏": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "shiShenLu\\riChangYuHun.png",
+            "shiShenLu\\riChangYuHun2.png"
+        ],
+        "action": "Click",
+        "target_offset": [
+            400,
+            0,
+            -100,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "确定_日常"
+        ],
+        "interrupt": [
+            "秘闻_御魂"
+        ]
+    },
+    "确定_日常": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\queDing.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_delay": 1000,
+        "next": [
+            "秘闻_御魂"
+        ]
+    },
+    "秘闻_御魂": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\miWen.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "next": [
+            "寻找_秘闻通用"
+        ],
+        "interrupt": [
+            "式神录回到顶部"
+        ]
+    },
+    "寻找_秘闻通用": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "shiShenLu\\miWenTongYong.png",
+            "shiShenLu\\miWenTongYong2.png"
+        ],
+        "action": "Click",
+        "target_offset": [
+            400,
+            0,
+            -55,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "确定_悬赏"
+        ],
+        "interrupt": [
+            "已换好_悬赏"
+        ]
+    },
+    "确定_悬赏": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\queDing.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "post_delay": 1000,
+        "next": [
+            "已换好_悬赏"
+        ]
+    },
+    "已换好_悬赏": {
+        "action": "Click",
+        "target": [
+            18,
+            9,
+            44,
+            41
+        ],
+        "post_delay": 2000,
+        "next": [
             "悬赏封印"
         ]
     },
@@ -285,14 +432,15 @@
         ]
     },
     "福袋结算_秘闻": {
-        "recognition": "TemplateMatch",
-        "template": "tanSuo\\fu.png",
+        "recognition": "FeatureMatch",
+        "count": 20,
+        "template": "common\\fu.png",
         "action": "Click",
-        "target": [
-            946,
-            490,
-            328,
-            229
+        "roi": [
+            350,
+            317,
+            617,
+            402
         ],
         "post_delay": 2000,
         "next": [

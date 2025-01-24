@@ -1,9 +1,18 @@
 {
-    "name": "MAAOnmyoji",
-    "url": "https://github.com/Aries-Dawn/MAAOnmyoji",
-    "custom_title": "MAAOnmyoji",
-    "default_controller": "adb",
-    "lock_controller": false,
+    "controller": [
+        {
+            "name": "安卓端",
+            "type": "Adb"
+        },
+        {
+            "name": "桌面端",
+            "type": "Win32",
+            "win32": {
+                "class_regex": ".*",
+                "window_regex": "Visual Studio"
+            }
+        }
+    ],
     "resource": [
         {
             "name": "官服",
@@ -15,23 +24,19 @@
     "task": [
         {
             "name": "御灵",
-            "entry": "tiaozhan_yuLing",
-            "checked": true,
-            "doc": "进入御灵界面，[b]选择要开始的副本[b]，锁定阵容后使用。",
-            "repeatable": true,
-            "repeat_count": 0
+            "entry": "tiaozhan_yuLing"
         },
         {
             "name": "困28",
-            "entry": "28",
-            "checked": true,
-            "doc": "进入探索界面"
+            "entry": "28"
         },
         {
-            "name": "地域鬼王👻",
-            "entry": "进入探索_地鬼",
-            "checked": true,
-            "doc": "进入探索界面"
+            "name": "地域鬼王",
+            "entry": "进入探索_地鬼"
+        },
+        {
+            "name": "无限桃园",
+            "entry": "等待出现一个体力"
         }
     ]
 }
