@@ -9,7 +9,13 @@
             68,
             72
         ],
-        "post_delay": 3000
+        "post_delay": 3000,
+        "next": [
+            "结束当前任务"
+        ]
+    },
+    "结束当前任务": {
+        "action": "StopTask"
     },
     "进入活动界面": {
         "recognition": "TemplateMatch",

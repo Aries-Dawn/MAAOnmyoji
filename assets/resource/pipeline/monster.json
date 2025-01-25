@@ -157,13 +157,24 @@
         "recognition": "TemplateMatch",
         "template": "FengMo\\shouLing.png",
         "action": "Click",
+        "post_delay": 2000,
         "next": [
             "鬼灵",
             "蜃气楼",
             "荒骷髅",
             "地震鲶",
             "土蜘蛛",
+            "胧车",
             "首领"
+        ]
+    },
+    "胧车": {
+        "recognition": "FeatureMatch",
+        "template": "FengMo\\longChe.png",
+        "action": "DoNothing",
+        "count": 20,
+        "next": [
+            "更换御魂_胧车"
         ]
     },
     "土蜘蛛": {
@@ -205,6 +216,84 @@
         "action": "DoNothing",
         "next": [
             "更换御魂_鬼灵"
+        ]
+    },
+    "更换御魂_胧车": {
+        "recognition": "TemplateMatch",
+        "template": "FengMo\\shiShenLu.png",
+        "roi": [
+            394,
+            588,
+            877,
+            131
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "next": [
+            "寻找预设_逢魔_胧车"
+        ]
+    },
+    "寻找预设_逢魔_胧车": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\yuShe.png",
+        "roi": [
+            24,
+            36,
+            490,
+            156
+        ],
+        "action": "Click",
+        "next": [
+            "寻找逢魔御魂1_胧车",
+            "寻找逢魔御魂2_胧车"
+        ],
+        "interrupt": [
+            "回到预设顶部"
+        ]
+    },
+    "寻找逢魔御魂1_胧车": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\fengMo.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "next": [
+            "寻找_胧车"
+        ],
+        "interrupt": [
+            "式神录回到顶部"
+        ]
+    },
+    "寻找逢魔御魂2_胧车": {
+        "recognition": "TemplateMatch",
+        "template": "shiShenLu\\fengMo2.png",
+        "action": "Click",
+        "threshold": 0.9,
+        "next": [
+            "寻找_胧车"
+        ],
+        "interrupt": [
+            "式神录回到顶部"
+        ]
+    },
+    "寻找_胧车": {
+        "recognition": "TemplateMatch",
+        "template": [
+            "shiShenLu\\longChe1.png",
+            "shiShenLu\\longChe2.png"
+        ],
+        "action": "Click",
+        "target_offset": [
+            400,
+            0,
+            -15,
+            0
+        ],
+        "post_delay": 2000,
+        "next": [
+            "确定"
+        ],
+        "interrupt": [
+            "已换好"
         ]
     },
     "更换御魂_地震鲶": {
@@ -410,7 +499,8 @@
             0,
             0
         ],
-        "duration": 500
+        "duration": 500,
+        "post_delay": 2000
     },
     "寻找逢魔御魂1": {
         "recognition": "TemplateMatch",
@@ -450,7 +540,8 @@
             0,
             0
         ],
-        "duration": 500
+        "duration": 500,
+        "post_delay": 2000
     },
     "寻找鬼灵": {
         "action": "Click",
@@ -573,6 +664,9 @@
             "进入了吗",
             "逢魔极",
             "逢魔首领"
+        ],
+        "interrupt": [
+            "重新寻找"
         ]
     },
     "进入了吗": {
