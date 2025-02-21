@@ -39,8 +39,55 @@
             "entry": "28"
         },
         {
-            "name": "无限桃园",
-            "entry": "桃园挂机入口"
+            "name": "测试",
+            "entry": "战斗结束云梦"
+        },
+        {
+            "name": "龙虎",
+            "entry": "云梦入口",
+            "option": [
+                "选择云梦战斗难度"
+            ]
         }
-    ]
+    ],
+    "option": {
+        "选择云梦战斗难度": {
+            "cases": [
+                {
+                    "name": "入云梦",
+                    "pipeline_override": {
+                        "点击龙虎": {
+                            "template": "other\\yunmeng\\ruyunmeng.png"
+                        },
+                        "龙虎1": {
+                            "roi": [
+                                31,
+                                970,
+                                654,
+                                238
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "龙虎1",
+                    "pipeline_override": {
+                        "点击龙虎": {
+                            "template": "other\\yunmeng\\longhu.png"
+                        }
+                    }
+                },
+                {
+                    "name": "龙虎2",
+                    "pipeline_override": {
+                        "点击龙虎": {
+                            "next": [
+                                "龙虎2"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }

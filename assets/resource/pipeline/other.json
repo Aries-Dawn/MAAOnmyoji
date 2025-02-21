@@ -1,19 +1,31 @@
 {
     "桃园挂机入口": {
         "timeout": 6000000,
+        "post_delay": 2000,
         "next": [
             "等待出现一个体力",
             "进入战斗"
         ]
     },
     "等待出现一个体力": {
-        "recognition": "TemplateMatch",
-        "template": "other\\1.png",
+        "recognition": "OCR",
         "roi": [
-            373,
-            37,
-            140,
-            57
+            521,
+            110,
+            198,
+            222
+        ],
+        "expected": [
+            "心忆1",
+            "心忆2",
+            "心忆3",
+            "心忆4",
+            "心忆5",
+            "心忆6",
+            "心忆7",
+            "心忆8",
+            "心忆9",
+            "心忆10"
         ],
         "timeout": 6000000,
         "next": [
@@ -22,18 +34,44 @@
     },
     "开启桃源村": {
         "recognition": "OCR",
-        "template": "other\\24民居.png",
         "expected": [
-            "地下窖室",
-            "民居",
-            "书肆"
+            "29"
         ],
         "post_delay": 2000,
         "action": "Click",
+        "target_offset": [
+            -160,
+            61,
+            100,
+            -50
+        ],
         "timeout": 6000000,
         "next": [
             "进入战斗"
-        ]
+        ],
+        "interrupt": "向下滑动"
+    },
+    "向下滑动": {
+        "recognition": "OCR",
+        "expected": [
+            "29",
+            "进入战斗"
+        ],
+        "inverse": true,
+        "action": "Swipe",
+        "begin": [
+            44,
+            240,
+            10,
+            10
+        ],
+        "end": [
+            48,
+            1073,
+            10,
+            10
+        ],
+        "duration": 2000
     },
     "进入战斗": {
         "recognition": "OCR",
@@ -51,6 +89,10 @@
         "timeout": 6000000,
         "next": [
             "开始战斗"
+        ],
+        "interrupt": [
+            "开启桃源村",
+            "向下滑动"
         ]
     },
     "开始战斗": {
@@ -68,6 +110,35 @@
         "timeout": 6000000,
         "next": [
             "等待桃园战斗结束"
+        ],
+        "interrupt": [
+            "不再提醒"
+        ]
+    },
+    "不再提醒": {
+        "recognition": "OCR",
+        "expected": [
+            "战斗危险性",
+            "十分危险"
+        ],
+        "action": "Click",
+        "target": [
+            283,
+            895,
+            19,
+            24
+        ],
+        "next": [
+            "确定-桃园"
+        ]
+    },
+    "确定-桃园": {
+        "action": "Click",
+        "target": [
+            397,
+            697,
+            216,
+            35
         ]
     },
     "等待桃园战斗结束": {
@@ -81,6 +152,7 @@
             37
         ],
         "timeout": 6000000,
+        "post_delay": 5000,
         "next": [
             "桃园挂机入口"
         ]

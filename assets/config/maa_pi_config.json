@@ -6,8 +6,22 @@
     "resource": "官服",
     "task": [
         {
-            "name": "御灵",
-            "option": []
+            "name": "测试",
+            "option": [],
+            "__vscExpand": false
         }
-    ]
+    ],
+    "adb": {
+        "adb_path": "I:/MuMu Player 12/shell/adb.exe",
+        "address": "127.0.0.1:16544",
+        "config": {
+            "extras": {
+                "mumu": {
+                    "enable": true,
+                    "index": 5,
+                    "path": "I:/MuMu Player 12"
+                }
+            }
+        }
+    }
 }
